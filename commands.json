@@ -1,0 +1,3441 @@
+{
+	"average": {
+		"command": "average",
+		"syntax": "average <variable> [type] <num1 num2 numN>",
+		"description": "Averages a given set of numbers and can round the results.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "This is the return  for the average result."
+			},
+			{
+				"name": "type",
+				"description": "This is optional and controls rounding."
+			}
+		]
+	},
+	"cheatexec": {
+		"command": "cheatexec",
+		"syntax": "cheatexec <userid> <command>",
+		"description": "Allows you to force a client to execute silently a cheat command as noclip",
+		"parameters": [
+			{
+				"name": "userid",
+				"description": "the  of the player"
+			},
+			{
+				"name": "command",
+				"description": "the cheat you want to be executed"
+			}
+		]
+	},
+	"clientcmd": {
+		"command": "clientcmd",
+		"syntax": "clientcmd <create/delete> <say/console> <command name> [block to call] [capability name] [permission level]",
+		"description": "Registers a say or console command that will initiate the specified block of code when used by an authorized player, passing its parameters.",
+		"parameters": [
+			{
+				"name": "create/delete",
+				"description": "Denotes whether the command should be created or delete."
+			},
+			{
+				"name": "say/console",
+				"description": "Denotes whether the command is a say or console command."
+			},
+			{
+				"name": "command name",
+				"description": "Name of the command to be created or deleted"
+			},
+			{
+				"name": "block to call",
+				"description": "Name of block that should initiate when the command is used in script/block notation. (Only used for creating commands.)"
+			},
+			{
+				"name": "capability name",
+				"description": "Name of the capability players must have to use the command, see naming capabilities. (Only used for creating commands.)"
+			},
+			{
+				"name": "permission level",
+				"description": "Default  for the capability, can be #root, #admin, #poweruser, #known, #all. (Only used for creating commands.)"
+			}
+		]
+	},
+	"crontab": {
+		"command": "crontab",
+		"syntax": "crontab <M H d m w> <\"command\"> [jobname] [overwrite?]",
+		"description": "Creates cronjobs for the HL2 engine similar to the Un*x crontab program.",
+		"parameters": [
+			{
+				"name": "M H d m w",
+				"description": "Minute, Hour, Day of the month, Month of the year, and Day of the week the job should be executed."
+			}
+		]
+	},
+	"damage": {
+		"command": "damage",
+		"syntax": "damage <target user> <damage> [<damage type> [<source userid>]]",
+		"description": "Damages a player with specified amount of damage.",
+		"parameters": [
+			{
+				"name": "target user",
+				"description": "the user(s) to be damaged"
+			},
+			{
+				"name": "damage",
+				"description": "the amount of  to give."
+			},
+			{
+				"name": "damage type",
+				"description": "optional, specifies the type of damage to give, see Damage types. Defaults to fall damage (32)."
+			},
+			{
+				"name": "source userid",
+				"description": "optional, the player that causes the damage and who gets credit for it. If omitted, the source is the target userid or random player if non-userid was given as target."
+			}
+		]
+	},
+	"downloadable": {
+		"command": "downloadable",
+		"syntax": "downloadable <path-to-file>",
+		"description": "Marks a file as downloadable.",
+		"parameters": [
+			{
+				"name": "path-to-file",
+				"description": "Location of the file to mark as downloadable relative to the base directory (i.e 'cstrike/' for Counter-Strike: Source)."
+			}
+		]
+	},
+	"else": {
+		"command": "else",
+		"syntax": "else <command>",
+		"description": "Will execute command if the condition from a previous if statement is false.",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "Command to execute. Can be a single  or use es_doblock to do several s. Can also use several s if you use a do block. (See Examples)"
+			}
+		]
+	},
+	"es": {
+		"command": "es",
+		"syntax": "es <server command>",
+		"description": "Will execute server command on the server and expand any eventscripts variables it finds.",
+		"parameters": [
+			{
+				"name": "server command",
+				"description": "Any type of command that you want the server to do."
+			}
+		]
+	},
+	"es_botsetvalue": {
+		"command": "es_botsetvalue",
+		"syntax": "es_botsetvalue <userid> <convar-name> \"<convar-value>\"",
+		"description": "Sets a particular server variable associated with a bot/fake client.",
+		"parameters": [
+			{
+				"name": "userid",
+				"description": "Userid of the fake client"
+			},
+			{
+				"name": "convar-name",
+				"description": " fake convar to set for them"
+			},
+			{
+				"name": "convar-value",
+				"description": " value of the variable to set for them"
+			}
+		]
+	},
+	"es_centermsg": {
+		"command": "es_centermsg",
+		"syntax": "es_centermsg <message>",
+		"description": "Broadcasts a centered HUD message to all players.",
+		"parameters": [
+			{
+				"name": "message",
+				"description": "text  you'd like displayed in the center of player's screen (short length limit)."
+			}
+		]
+	},
+	"es_centertell": {
+		"command": "es_centertell",
+		"syntax": "es_centertell <userid> <message>",
+		"description": "Broadcasts a centered HUD message ONLY to specified user.",
+		"parameters": [
+			{
+				"name": "userid",
+				"description": "Userid of the player to display the centered message to."
+			},
+			{
+				"name": "message",
+				"description": "text message you'd like displayed in the center of player's screen (short length limit)."
+			}
+		]
+	},
+	"es_cexec": {
+		"command": "es_cexec",
+		"syntax": "es_cexec <userid> <command>",
+		"description": "Forces the provided userid to run a client-side command.",
+		"parameters": [
+			{
+				"name": "userid",
+				"description": "Userid of the client who is running the command."
+			},
+			{
+				"name": "command",
+				"description": "Command that the userid is forced to run."
+			}
+		]
+	},
+	"es_cexec_all": {
+		"command": "es_cexec_all",
+		"syntax": "es_cexec_all <command>",
+		"description": "Forces all userids to run a client-side command.",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "Command that all players are forced to run."
+			}
+		]
+	},
+	"es_changeteam": {
+		"command": "es_changeteam",
+		"syntax": "es_changeteam <userid> <teamnum>",
+		"description": "Forces a player to move to another team.",
+		"parameters": [
+			{
+				"name": "userid",
+				"description": "The  of the player to switch."
+			},
+			{
+				"name": "teamnum",
+				"description": "The team # you want the player to switch to."
+			}
+		]
+	},
+	"es_commandv": {
+		"command": "es_commandv",
+		"syntax": "es_commandv <variable>",
+		"description": "Executes what is in the variable as a command.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "Whatever this variable is set to is what will be executed as a command."
+			}
+		]
+	},
+	"es_copy": {
+		"command": "es_copy",
+		"syntax": "es_copy <Variable1> <Variable2>",
+		"description": "Copies the value of one variable to another",
+		"parameters": [
+			{
+				"name": "Variable1",
+				"description": "Variable you would like to have a value copied to"
+			},
+			{
+				"name": "Variable2",
+				"description": "Variable that will have its value copied to Variable1"
+			}
+		]
+	},
+	"es_createbot": {
+		"command": "es_createbot",
+		"syntax": "es_createbot [variable] <name>",
+		"description": "Adds a fake client to the server.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "A  to store the userid of the created player. (Added in EventScripts v1.3)"
+			},
+			{
+				"name": "name",
+				"description": "The  of the fake player"
+			}
+		]
+	},
+	"es_createentitylist": {
+		"command": "es_createentitylist",
+		"syntax": "es_createentitylist <keygroup-name> [entityname]",
+		"description": "Creates a keygroup with a list of all entities, that are currently on the map, with info about them. It uses the entity index as the keys within that keygroup.",
+		"parameters": [
+			{
+				"name": "keygroup-name",
+				"description": "name of the keygroup to create (be sure it doesn't already exist)"
+			},
+			{
+				"name": "entityname",
+				"description": "the name of a certain entity, such as weapon_glock, if you only want to populate the keygroup with a list of that entity type."
+			}
+		]
+	},
+	"es_createplayerlist": {
+		"command": "es_createplayerlist",
+		"syntax": "es_createplayerlist <keygroup-name> [userid]",
+		"description": "Creates a keygroup with a list of all players with info about them. It uses userids as the keys within that keygroup.",
+		"parameters": [
+			{
+				"name": "keygroup-name",
+				"description": "name of the keygroup to create (be sure it doesn't already exist)"
+			},
+			{
+				"name": "userid",
+				"description": "optional parameter which causes the command to retrieve only information for a single player."
+			}
+		]
+	},
+	"es_createscriptlist": {
+		"command": "es_createscriptlist",
+		"syntax": "es_createscriptlist <keygroup-name>",
+		"description": "Creates a keygroup with a list of all scripts currently loaded and their status.",
+		"parameters": [
+			{
+				"name": "keygroup-name",
+				"description": "name of the keygroup to create (be sure it doesn't already exist)."
+			}
+		]
+	},
+	"es_createvectorfrompoints": {
+		"command": "es_createvectorfrompoints",
+		"syntax": "es_createvectorfrompoints <outputvar> <vectorstring-A> <vectorstring-B>",
+		"description": "Creates a vectorstring (stored in outputvar) that points from vector/point A to vector/point B.",
+		"parameters": [
+			{
+				"name": "outputvar",
+				"description": "the name of the variable where the actual vector will be stored."
+			},
+			{
+				"name": "vectorstring-A",
+				"description": "the name of the variable which holds the position of point A."
+			},
+			{
+				"name": "vectorstring-B",
+				"description": "the name of the variable which holds the position of point B."
+			}
+		]
+	},
+	"es_createvectorstring": {
+		"command": "es_createvectorstring",
+		"syntax": "es_createvectorstring <output-var> <x> <y> <z>",
+		"description": "Creates a vector string (stored in outputvar) that contains x, y, and z.",
+		"parameters": [
+			{
+				"name": "outputvar",
+				"description": "the name of the variable where the actual vector will be stored."
+			},
+			{
+				"name": "x",
+				"description": "the name of the variable which holds the  position."
+			},
+			{
+				"name": "y",
+				"description": "the name of the variable which holds the  position."
+			},
+			{
+				"name": "z",
+				"description": "the name of the variable which holds the  position."
+			}
+		]
+	},
+	"es_dbgmsg": {
+		"command": "es_dbgmsg",
+		"syntax": "es_dbgmsg <level> <msg>",
+		"description": "Outputs debug messages controlled by the eventscripts_debug level and the eventscripts_debuglog setting",
+		"parameters": [
+			{
+				"name": "level",
+				"description": "The  of eventscripts_debug, or higher, at which this message outputs."
+			},
+			{
+				"name": "msg",
+				"description": "The debug  to show up in console."
+			}
+		]
+	},
+	"es_dbgmsgv": {
+		"command": "es_dbgmsgv",
+		"syntax": "es_dbgmsgv <level> <msg-variable>",
+		"description": "Outputs debug messages controlled by the eventscripts_debug level and the eventscripts_debuglog setting",
+		"parameters": [
+			{
+				"name": "level",
+				"description": "The  of eventscripts_debug, or higher, at which this message outputs."
+			},
+			{
+				"name": "msg-variable",
+				"description": "The variable that contains the debug msg to show up in console."
+			}
+		]
+	},
+	"es_delayed": {
+		"command": "es_delayed",
+		"syntax": "es_delayed <delaytime> <command>",
+		"description": "Executes the command after the delaytime (in seconds)",
+		"parameters": [
+			{
+				"name": "delaytime",
+				"description": "Number of seconds that you'd like to delay the command for. (can be float values, i.e. 1.23)"
+			},
+			{
+				"name": "command",
+				"description": "Command to be executed. Can be a single  or a block (using es_xdoblock)."
+			}
+		]
+	},
+	"es_disable": {
+		"command": "es_disable",
+		"syntax": "es_disable <scriptaddon>",
+		"description": "Disables (Not unloads) a script addon loaded into your server",
+		"parameters": [
+			{
+				"name": "scriptaddon",
+				"description": "Name of a script addon that you have loaded in your server"
+			}
+		]
+	},
+	"es_doblock": {
+		"command": "es_doblock",
+		"syntax": "es_doblock <scriptname>/<blockname>",
+		"description": "Executes a named block of code from a script addon file",
+		"parameters": [
+			{
+				"name": "blockname",
+				"description": "name of the block to execute (e.g. es_doblock mugmod/testblock)"
+			}
+		]
+	},
+	"es_dumpentities": {
+		"command": "es_dumpentities",
+		"syntax": "es_dumpentities",
+		"description": "Dumps to console all server classes and properties for all entities",
+		"parameters": [
+			{
+				"name": "none",
+				"description": "No parameters"
+			}
+		]
+	},
+	"es_dumpserverclasses": {
+		"command": "es_dumpserverclasses",
+		"syntax": "es_dumpserverclasses",
+		"description": "Dumps to the console all server classes",
+		"parameters": [
+			{
+				"name": "none",
+				"description": "No parameters"
+			}
+		]
+	},
+	"es_dumpstringtables": {
+		"command": "es_dumpstringtables",
+		"syntax": "es_dumpstringtables",
+		"description": "Lists all stringtables and all strings within them to the console.",
+		"parameters": [
+			{
+				"name": "eventscripts_debuglog",
+				"description": "Respects  for writing to the server log"
+			}
+		]
+	},
+	"es_effect": {
+		"command": "es_effect",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_effect beam": {
+		"command": "es_effect beam",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_effect dust": {
+		"command": "es_effect dust",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_effect energysplash": {
+		"command": "es_effect energysplash",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_effect smoke": {
+		"command": "es_effect smoke",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_effect sparks": {
+		"command": "es_effect sparks",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_emitsound": {
+		"command": "es_emitsound",
+		"syntax": "es_emitsound <emitter-type> <id> <soundfile> <volume> <attenuation>",
+		"description": "Plays a sound centered from the target player or entity",
+		"parameters": [
+			{
+				"name": "emitter-type",
+				"description": "This must be either"
+			},
+			{
+				"name": "id",
+				"description": "If player specified this is a user. If entity specified it's an entity index. Specifies what will emit the sound."
+			},
+			{
+				"name": "soundfile",
+				"description": "Soundfile you want to have played"
+			},
+			{
+				"name": "volume",
+				"description": " of the sound (max: 1.0)"
+			},
+			{
+				"name": "attenuation",
+				"description": "how far the sound reaches (all across map: 0.0)"
+			}
+		]
+	},
+	"es_enable": {
+		"command": "es_enable",
+		"syntax": "es_enable <scriptaddon>",
+		"description": "Enables (Not loads) a disabled script addon loaded in your server",
+		"parameters": [
+			{
+				"name": "scriptaddon",
+				"description": "Name of a script addon that you have loaded in your server"
+			}
+		]
+	},
+	"es_entcreate": {
+		"command": "es_entcreate",
+		"syntax": "es_entcreate <userid> <entityname>",
+		"description": "Creates an entity where a player is looking.",
+		"parameters": [
+			{
+				"name": "userid",
+				"description": "Userid of player to use when creating entity"
+			},
+			{
+				"name": "entityname",
+				"description": "Name of an entity to give to the player, such as env_explosion."
+			}
+		]
+	},
+	"es_entsetname": {
+		"command": "es_entsetname",
+		"syntax": "es_entsetname <userid> <name>",
+		"description": "Names an entity that the specified userid is looking at. (Doesn't change player name)",
+		"parameters": [
+			{
+				"name": "userid",
+				"description": "Userid of player looking at the entity you want named"
+			},
+			{
+				"name": "name",
+				"description": "Name that you want to give the entity"
+			}
+		]
+	},
+	"es_event": {
+		"command": "es_event",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_event_cancel": {
+		"command": "es_event_cancel",
+		"syntax": "es_event cancel <event-name>",
+		"description": "Use to cancel a initialized event",
+		"parameters": [
+			{
+				"name": "event-name",
+				"description": "The name of the event you want to cancel."
+			}
+		]
+	},
+	"es_event_fire": {
+		"command": "es_event_fire",
+		"syntax": "es_event fire <event-name>",
+		"description": "Sends an event to all plugins and scripts. Must be initialized very soon before calling fire.",
+		"parameters": [
+			{
+				"name": "event-name",
+				"description": "The name of the event you want to broadcast."
+			}
+		]
+	},
+	"es_event_initialize": {
+		"command": "es_event_initialize",
+		"syntax": "es_event initialize <event-name>",
+		"description": "Prepares an event to be sent to scripts/plugins. Must be followed very soon with es_event fire or es_event cancel.",
+		"parameters": [
+			{
+				"name": "event-name",
+				"description": "The name of the event you want to initialize."
+			}
+		]
+	},
+	"es_event_setfloat": {
+		"command": "es_event_setfloat",
+		"syntax": "es_event setfloat <event-name> <name> <float>",
+		"description": "Sets for the initialized event <event-name> the event_var(<name>)to the <float>",
+		"parameters": [
+			{
+				"name": "event-name",
+				"description": "The name of the event you want to use"
+			},
+			{
+				"name": "name",
+				"description": "The  of the event_var()"
+			},
+			{
+				"name": "float",
+				"description": "String to set the event_var() after a "
+			}
+		]
+	},
+	"es_event_setint": {
+		"command": "es_event_setint",
+		"syntax": "es_event setint <event-name> <name> <integer>",
+		"description": "Sets for the initialized event <event-name> the event_var(<name>)to the <integer>",
+		"parameters": [
+			{
+				"name": "event-name",
+				"description": "The name of the event you want to use"
+			},
+			{
+				"name": "name",
+				"description": "The  of the event_var()"
+			},
+			{
+				"name": "integer",
+				"description": "String to set the event_var() after a  value"
+			}
+		]
+	},
+	"es_event_setstring": {
+		"command": "es_event_setstring",
+		"syntax": "es_event setstring <event-name> <name> <string>",
+		"description": "Sets for the initialized event <event-name> the event_var(<name>)to the <string>",
+		"parameters": [
+			{
+				"name": "event-name",
+				"description": "The name of the event you want to use"
+			},
+			{
+				"name": "name",
+				"description": "The  of the event_var()"
+			},
+			{
+				"name": "string",
+				"description": "String to set the event_var() after"
+			}
+		]
+	},
+	"es_exists": {
+		"command": "es_exists",
+		"syntax": "es_exists <variable> <type> [keygroup] [key] <name>",
+		"description": "Checks for the existence of item specified by type and stores the result in variable. 0 means it does not exist and 1 means it does exists.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": " in which the result is stored."
+			},
+			{
+				"name": "type",
+				"description": " of item to be checked."
+			},
+			{
+				"name": "keygroup",
+				"description": " name to use for key, or keyvalue check only. Otherwise do not use this parameter."
+			},
+			{
+				"name": "key",
+				"description": " name to use for value check only. Otherwise do not use this parameter"
+			},
+			{
+				"name": "name",
+				"description": " or id of item to be checked."
+			}
+		]
+	},
+	"es_fadevolume": {
+		"command": "es_fadevolume",
+		"syntax": "es_fadevolume <userid> <percent> <fadetime> <holdtime> <fadeintime>",
+		"description": "Deafens a player.",
+		"parameters": [
+			{
+				"name": "userid",
+				"description": "Player to deafen"
+			},
+			{
+				"name": "percent",
+				"description": "the amount their volume should be faded. 100 for total deafness."
+			},
+			{
+				"name": "fadetime",
+				"description": "the time it takes to fade to maximum percentage"
+			},
+			{
+				"name": "holdtime",
+				"description": "how long they remain deafened/faded"
+			},
+			{
+				"name": "fadeintime",
+				"description": "how long it takes to return to full hearing"
+			}
+		]
+	},
+	"es_fire": {
+		"command": "es_fire",
+		"syntax": "es_fire <userid> <classname or targetname> <input name> [optional parameter] [delay]",
+		"description": "Cause a player to manipulate game entities. It works the same as Valve's \"ent_fire\" but you can force players to run it without cheats",
+		"parameters": [
+			{
+				"name": "userid",
+				"description": "Player that you wish to trigger the event"
+			},
+			{
+				"name": "classname/targetname",
+				"description": "Class or Target to trigger"
+			},
+			{
+				"name": "input name",
+				"description": "All entities have different input triggers"
+			},
+			{
+				"name": "value",
+				"description": "Value of input you wish to change."
+			},
+			{
+				"name": "delay",
+				"description": "Delay the action for x seconds."
+			}
+		]
+	},
+	"es_flags": {
+		"command": "es_flags",
+		"syntax": "es_flags <add/remove> <flag> <command/var>",
+		"description": "Allows you to add/remove certain flags from variables and commands.",
+		"parameters": [
+			{
+				"name": "add/remove",
+				"description": "Choose whether to add or remove the flag."
+			},
+			{
+				"name": "flag",
+				"description": "This is the  you want to add/remove. Possible values are cheat and (in ES2) notify, gamedll, replicated, protected, unlogged, neverstring, printable, demo, and dontrecord."
+			},
+			{
+				"name": "command/var",
+				"description": "This is the command/cvar you want to add/remove the flag to/from."
+			}
+		]
+	},
+	"es_forcevalue": {
+		"command": "es_forcevalue",
+		"syntax": "es_forcevalue <var> <value>",
+		"description": "Attempts to force the variable to a particular value. Useful primarily for sv_cheats without notification.",
+		"parameters": [
+			{
+				"name": "var",
+				"description": "The name of the iable to force value upon"
+			},
+			{
+				"name": "value",
+				"description": "Value you wish to set"
+			}
+		]
+	},
+	"es_foreachkey": {
+		"command": "es_foreachkey",
+		"syntax": "es_foreachkey <variablename> in <keygroupname> \"<commandstring>\"",
+		"description": "Loops through a keygroup's keys and executes a command of your choosing. A variable is set to the name of the key before the command is run inside the loop.",
+		"parameters": [
+			{
+				"name": "variablename",
+				"description": "the name of the variable to create and set to the key's name before each commandstring fires."
+			},
+			{
+				"name": "keygroupname",
+				"description": "the name of the keygroup in which to loop through the keys"
+			},
+			{
+				"name": "commandstring",
+				"description": "\"\" This is the command-string you wish to execute for every key within the specified keygroup"
+			}
+		]
+	},
+	"es_foreachval": {
+		"command": "es_foreachval",
+		"syntax": "es_foreachval <variable> in <groupname> <keyname> \"<commandstring>\"",
+		"description": "Loops through a key's value and executes a command of your choosing. A variable is set to the name of the value before the command is run inside the loop.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "the name of the  to create and set to the keyvalue's name before each commandstring fires."
+			},
+			{
+				"name": "groupname",
+				"description": "the name of the keygroup in which to look for the keyname"
+			},
+			{
+				"name": "keyname",
+				"description": " -- the name of the key within keygroup groupname for which to loop through the values"
+			},
+			{
+				"name": "commandstring",
+				"description": "\"\"this is the command-string you wish to execute for every value within the specified key."
+			}
+		]
+	},
+	"es_format": {
+		"command": "es_format",
+		"syntax": "es_format <variable> <format-string> [token1] [token2] [token3] [...] [token9]",
+		"description": "Formats a string according to the format-string and stores it into the variable command.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "Variable to store the string into."
+			},
+			{
+				"name": "format-string",
+				"description": "String that you would like to place the parameters into. Will place tokenX in  in place of %X."
+			},
+			{
+				"name": "tokenX",
+				"description": "Tokens that will be placed in the string. Can have any number of tokens from 0 to 9."
+			}
+		]
+	},
+	"es_formatqv": {
+		"command": "es_formatqv",
+		"syntax": "es_formatqv <variable> <format-string> [token1] [token2] [token3] [...] [token9]",
+		"description": "Formats a string according to the format-string escaping all special characters to be used in an SQL query, and stores it into the variable.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "Variable to store the string into."
+			},
+			{
+				"name": "format-string",
+				"description": "String that you would like to place the parameters into. Will place tokenX in  in place of %X."
+			},
+			{
+				"name": "tokenX",
+				"description": "Tokens that will be placed in the string. The tokens must be variable names! Can have any number of tokens from 0 to 9."
+			}
+		]
+	},
+	"es_formatv": {
+		"command": "es_formatv",
+		"syntax": "es_formatv <variable> <format-string> [token1] [token2] [token3] [...] [token9]",
+		"description": "Formats a string according to the format-string and stores it into the variable.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "Variable to store the string into."
+			},
+			{
+				"name": "format-string",
+				"description": "String that you would like to place the parameters into. Will place tokenX in  in place of %X."
+			},
+			{
+				"name": "tokenX",
+				"description": "Tokens that will be placed in the string. The tokens must be variable names! Can have any number of tokens from 0 to 9."
+			}
+		]
+	},
+	"es_getargc": {
+		"command": "es_getargc",
+		"syntax": "es_getargc <variable>",
+		"description": "Returns the number of arguments sent to a command that has been registered with es_regcmd.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "Variable to store the number of arguments into."
+			}
+		]
+	},
+	"es_getargs": {
+		"command": "es_getargs",
+		"syntax": "es_getargs <variable>",
+		"description": "Returns the number of arguments sent to a command that has been registered with es_regcmd.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "Variable to store the arguments as a string into."
+			}
+		]
+	},
+	"es_getargv": {
+		"command": "es_getargv",
+		"syntax": "es_getargv <variable> <argument>",
+		"description": "Gets a specified argument from the last command that was sent.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "Variable you would like the argument value to be stored in."
+			},
+			{
+				"name": "argument",
+				"description": "Argument number, e.g 1"
+			}
+		]
+	},
+	"es_getclientvar": {
+		"command": "es_getclientvar",
+		"syntax": "es_getclientvar <server-variable> <userid> <varname>",
+		"description": "Obtains a network-related console variable for the particular userid and stores it in server-variable.",
+		"parameters": [
+			{
+				"name": "server-variable",
+				"description": "server-side variable where you want to store the value of the client-side variable"
+			},
+			{
+				"name": "userid",
+				"description": " of the user whose variable you want to inspect"
+			},
+			{
+				"name": "varname",
+				"description": "name of the network-related client-side variable you'd like to inspect"
+			}
+		]
+	},
+	"es_getcmduserid": {
+		"command": "es_getcmduserid",
+		"syntax": "es_getcmduserid <cvar>",
+		"description": "Returns the userid of the player who issued a say/client command.",
+		"parameters": [
+			{
+				"name": "cvar",
+				"description": "This is the  which should hold the userid of the player."
+			}
+		]
+	},
+	"es_getentityindex": {
+		"command": "es_getentityindex",
+		"syntax": "es_getentityindex <variable> <entity-name>",
+		"description": "Gets the index of the first entity-name and stores it in variable",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "name of the  where you want to save the entity index."
+			},
+			{
+				"name": "entity-name",
+				"description": "name of the entity for which you want to find the first index."
+			}
+		]
+	},
+	"es_getgame": {
+		"command": "es_getgame",
+		"syntax": "es_getgame <var>",
+		"description": "Stores the name of the current Source game that loaded EventScripts",
+		"parameters": [
+			{
+				"name": "var",
+				"description": "iable to store the name of the game."
+			}
+		]
+	},
+	"es_getindexprop": {
+		"command": "es_getindexprop",
+		"syntax": "es_getindexprop <variable> <index> \"<property>\"",
+		"description": "Get the value of a class property from the entity defined by index and stores it in variable.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "Variable to assign the entity property to."
+			},
+			{
+				"name": "index",
+				"description": "Index of the entity to get the property from."
+			},
+			{
+				"name": "property",
+				"description": "Direct name of the variable from source, i.e. CBaseEntity.vecOrigin (location of the entity in the map)"
+			}
+		]
+	},
+	"es_getlivingplayercount": {
+		"command": "es_getlivingplayercount",
+		"syntax": "es_getlivingplayercount <variable> [team number]",
+		"description": "Similar to es_getplayercount, but only counts players that are not dead.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "name of the  you want to save the living player count."
+			},
+			{
+				"name": "team number",
+				"description": "optional parameter to specify which team you want. 2Terrorists, 3Counter Terrorists"
+			}
+		]
+	},
+	"es_getmaxplayercount": {
+		"command": "es_getmaxplayercount",
+		"syntax": "es_getmaxplayercount <variable>",
+		"description": "Store in a variable, the result of the max or player that can enter to server! (Slots)",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "name of the  you want to save the max player count."
+			}
+		]
+	},
+	"es_getmoney": {
+		"command": "es_getmoney",
+		"syntax": "es_getmoney <variable> <userid>",
+		"description": "Looks up the money of the player specified by userid and stores it in the variable. (CS:S only) EventScripts will expand any variables it finds.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "a  where you wish to store the player money"
+			},
+			{
+				"name": "userid",
+				"description": "ID of player"
+			}
+		]
+	},
+	"es_getplayercount": {
+		"command": "es_getplayercount",
+		"syntax": "es_getplayercount <variable> [team number]",
+		"description": "Stores the count of players on the server into a variable. Optionally, a team can be specified and the count of that team will be returned.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "name of the  you want to save the player count."
+			},
+			{
+				"name": "team number",
+				"description": "optional parameter to specify which team you want. 2Terrorists, 3Counter Terrorists"
+			}
+		]
+	},
+	"es_getplayerhandle": {
+		"command": "es_getplayerhandle",
+		"syntax": "es_getplayerhandle <variable> <userid>",
+		"description": "Returns the hOwner property of userid and puts it in variable.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "the  which should contain the hOwner property value."
+			},
+			{
+				"name": "userid",
+				"description": "the  of player who's hOwner property is wanted."
+			}
+		]
+	},
+	"es_getplayerlocation": {
+		"command": "es_getplayerlocation",
+		"syntax": "es_getplayerlocation <x> <y> <z> <userid>",
+		"description": "Obtains the current coordinates of a given player and stores the X, Y, and Z coordinates in <x>, <y>, and <z>.",
+		"parameters": [
+			{
+				"name": "x",
+				"description": " Variable in which the X coordinate of a player is stored"
+			},
+			{
+				"name": "y",
+				"description": " Variable in which the Y coordinate of a plaer is stored"
+			},
+			{
+				"name": "z",
+				"description": " Variable in which the Z coordinate of a player is stored"
+			},
+			{
+				"name": "userid",
+				"description": "UserID of the target player"
+			}
+		]
+	},
+	"es_getplayermovement": {
+		"command": "es_getplayermovement",
+		"syntax": "es_getplayermovement <forwardmove> <sidemove> <upmove> <userid>",
+		"description": "Stores the player's current forward movement value, side movement value, and upward movement value (in 3 different variables).",
+		"parameters": [
+			{
+				"name": "forwardmove",
+				"description": "velocity of the players forward movement."
+			},
+			{
+				"name": "sidemove",
+				"description": "velocity of the players sideward movement."
+			},
+			{
+				"name": "upmove",
+				"description": "velocity of the players upward movement."
+			}
+		]
+	},
+	"es_getplayername": {
+		"command": "es_getplayername",
+		"syntax": "es_getplayername <variable> <userid>",
+		"description": "Stores the user's name in the variable specified.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "Variable which will store the player's name"
+			},
+			{
+				"name": "userid",
+				"description": "User id of the player"
+			}
+		]
+	},
+	"es_getplayerprop": {
+		"command": "es_getplayerprop",
+		"syntax": "es_getplayerprop <variable> <userid> \"<property>\"",
+		"description": "Get the value of a class property from the player.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "Variable to assign the player property to."
+			},
+			{
+				"name": "userid",
+				"description": "Userid of the user to get the property from."
+			},
+			{
+				"name": "property",
+				"description": "Direct name of the variable from source, i.e. CBaseEntity.vecOrigin (location of the player in the map)"
+			}
+		]
+	},
+	"es_getplayersteamid": {
+		"command": "es_getplayersteamid",
+		"syntax": "es_getplayersteamid <variable> <userid>",
+		"description": "Stores the user's steamid in the specified variable.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "Variable which will store the player's steamid"
+			},
+			{
+				"name": "userid",
+				"description": "User id of the player"
+			}
+		]
+	},
+	"es_getplayerteam": {
+		"command": "es_getplayerteam",
+		"syntax": "es_getplayerteam <variable> <userid>",
+		"description": "Stores the user's team in the specified variable.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "Variable which will store the player's team # index"
+			},
+			{
+				"name": "userid",
+				"description": "User id of the player"
+			}
+		]
+	},
+	"es_gettime": {
+		"command": "es_gettime",
+		"syntax": "es_gettime <variable>",
+		"description": "Stores the current seconds since January 1, 1970 in variable. Always growing value. EventScripts will expand any variables it finds.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "name of the  to store the current time."
+			}
+		]
+	},
+	"es_gettimestamp": {
+		"command": "es_gettimestamp",
+		"syntax": "es_gettimestamp <variable>",
+		"description": "Stores a shorter timestamp than es_gettime in the variable. Always growing value. EventScripts will expand any variables it finds.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "name of the  to store the timestamp."
+			}
+		]
+	},
+	"es_gettimestring": {
+		"command": "es_gettimestring",
+		"syntax": "es_gettimestring <variable>",
+		"description": "Stores the current time into variable formatted depending on the value of eventscripts_timeformat.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "Where the current time is stored."
+			}
+		]
+	},
+	"es_getuserid": {
+		"command": "es_getuserid",
+		"syntax": "es_getuserid <variable> [match-text]",
+		"description": "Searches all online users to see if their STEAMID, userid, handle, or name matches the match-text. It stores the userid in variable-- a 0 return indicates no match was found.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "a  where you wish to store the"
+			},
+			{
+				"name": "match-text",
+				"description": "optional parameter providing the text you'd like to search for in the player's name. Also accepts full STEAMIDs and userids. If this parameter isn't provided, es_getuserid returns a valid userid of one of the connected player's. This userid IS NOT RANDOM."
+			}
+		]
+	},
+	"es_give": {
+		"command": "es_give",
+		"syntax": "es_give <userid> <entityname>",
+		"description": "Gives the player a named entity.",
+		"parameters": [
+			{
+				"name": "userid",
+				"description": "Userid of player to give the entity to."
+			},
+			{
+				"name": "entityname",
+				"description": "Name of an entity to give to the player, such as weapon_awp."
+			}
+		]
+	},
+	"es_install": {
+		"command": "es_install",
+		"syntax": "es_install [basename] [autoload]",
+		"description": "Installs approved addons from the ESAM",
+		"parameters": [
+			{
+				"name": "basename",
+				"description": " of addon to install. When not provided this command lists installed addons."
+			},
+			{
+				"name": "autoload",
+				"description": "nonzero if the addon should be automatically loaded when the server starts"
+			}
+		]
+	},
+	"es_isbot": {
+		"command": "es_isbot",
+		"syntax": "es_isbot <variable> <userid>",
+		"description": "Sets the provided variable to 1 if the userid belongs to a bot, 0 if it belongs to a legit player, or -1 if it's an invalid userid.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "This will be a 1 if the userid belongs to a bot, 0 if it belongs to a legit player, or -1 if it's an invalid userid."
+			},
+			{
+				"name": "userid",
+				"description": "The valid  of the player you wish to test."
+			}
+		]
+	},
+	"es_keycreate": {
+		"command": "es_keycreate",
+		"syntax": "es_keycreate [keygroup] <key>",
+		"description": "Creates a key inside a keygroup (or without a keygroup).",
+		"parameters": [
+			{
+				"name": "keygroup",
+				"description": "Name of the  you wish to create the key inside."
+			},
+			{
+				"name": "key",
+				"description": "Name of the  you wish to create."
+			}
+		]
+	},
+	"es_keydelete": {
+		"command": "es_keydelete",
+		"syntax": "es_keydelete [keygroup] <key>",
+		"description": "Deletes a key from a keygroup (or without a keygroup).",
+		"parameters": [
+			{
+				"name": "keygroup",
+				"description": "Name of the  you wish to delete the key from."
+			},
+			{
+				"name": "key",
+				"description": "Name of the  you wish to deleete."
+			}
+		]
+	},
+	"es_keygetvalue": {
+		"command": "es_keygetvalue",
+		"syntax": "es_keygetvalue <variable> [keygroup] <key> <valuename>",
+		"description": "Retrieve the value from the specified valuename.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "name of the  to store the value."
+			},
+			{
+				"name": "keygroup",
+				"description": "Name of the  that the valuename resides."
+			},
+			{
+				"name": "key",
+				"description": "Name of the  that the valuename resides."
+			},
+			{
+				"name": "valuename",
+				"description": "Name of the  to retrieve the value of."
+			}
+		]
+	},
+	"es_keygroupcopy": {
+		"command": "es_keygroupcopy",
+		"syntax": "es_keygroupcopy <from-keygroup> <to-keygroup>",
+		"description": "Copies a keygroup into another keygroup. Will create the <to-keygroup>.",
+		"parameters": [
+			{
+				"name": "from-keygroup",
+				"description": "name of the keygroup you want to copy"
+			},
+			{
+				"name": "to-keygroup",
+				"description": "name of the keygroup you want to copy into"
+			}
+		]
+	},
+	"es_keygroupcreate": {
+		"command": "es_keygroupcreate",
+		"syntax": "es_keygroupcreate <keygroupname>",
+		"description": "Creates a keygroup with the name <keygroupname>, within which subkeys can be created to store various items of data about an entity. A keygroup is similar to the Windows Registry, where the keygroup is the top level (such as HKEY_LOCAL_MACHINE).",
+		"parameters": [
+			{
+				"name": "keygroupname",
+				"description": "name of the keygroup you want to create"
+			}
+		]
+	},
+	"es_keygroupdelete": {
+		"command": "es_keygroupdelete",
+		"syntax": "es_keygroupdelete <keygroupname>",
+		"description": "Deletes a keygroup with the name <keygroupname>.",
+		"parameters": [
+			{
+				"name": "keygroupname",
+				"description": "the name of the keygroup you want to delete"
+			}
+		]
+	},
+	"es_keygroupfilter": {
+		"command": "es_keygroupfilter",
+		"syntax": "es_keygroupfilter <keygroup> <not/only> <part-of-value-name> <value>",
+		"description": "Applies a filter to prune a keygroup. You can filter the keygroup such that it includes \"only\" keys with the valuename/value pair, or you can filter it such that the keygroup only includes keys that do \"not\" include the valuename/value pair.",
+		"parameters": [
+			{
+				"name": "keygroup",
+				"description": "the name of the keygroup in question"
+			},
+			{
+				"name": "not/only",
+				"description": "only: Include keys that ONLY have specified valuename/value combination in them. not: Include all keys that do NOT have specifed valuename/value in them."
+			},
+			{
+				"name": "part-of-value-name",
+				"description": "value name of keys to include/exclude in filter."
+			},
+			{
+				"name": "value",
+				"description": "value of key to include/exclude from the filter."
+			}
+		]
+	},
+	"es_keygrouplist": {
+		"command": "es_keygrouplist",
+		"syntax": "es_keygrouplist",
+		"description": "Prints to console a list of all keygroups currently in memory on the server.",
+		"parameters": [
+			{
+				"name": "Usefull for script writers for verifications.Work great with HLSW to send the command in console and then watching log file with Wordpad for result.",
+				"description": ""
+			}
+		]
+	},
+	"es_keygroupload": {
+		"command": "es_keygroupload",
+		"syntax": "es_keygroupload <keygroup> [location]",
+		"description": "Loades a keygroup from disk into memory.",
+		"parameters": [
+			{
+				"name": "keygroup",
+				"description": "Name of the  you wish to load into memory."
+			},
+			{
+				"name": "location",
+				"description": "Location (relative to cfg/events/) of the file you wish to load."
+			}
+		]
+	},
+	"es_keygrouprename": {
+		"command": "es_keygrouprename",
+		"syntax": "es_keygrouprename <keygroupname> <newname>",
+		"description": "Changes the name of <keygroupname> to <newname>.",
+		"parameters": [
+			{
+				"name": "keygroupname",
+				"description": "name of the keygroup to rename."
+			},
+			{
+				"name": "newname",
+				"description": "The new name of the keygroup."
+			}
+		]
+	},
+	"es_keygroupsave": {
+		"command": "es_keygroupsave",
+		"syntax": "es_keygroupsave <keygroup> [location]",
+		"description": "Saves a keygroup from memory to disk.",
+		"parameters": [
+			{
+				"name": "keygroup",
+				"description": "Name of the  you wish to save to disk."
+			},
+			{
+				"name": "location",
+				"description": "Location (relative to cfg/events/) of the file you wish to save."
+			}
+		]
+	},
+	"es_keylist": {
+		"command": "es_keylist",
+		"syntax": "es_keylist [keygroupname]",
+		"description": "Lists all keys in memory that are not associated with a group. If a group name is specified, it will list all keys and all values from that keygroup.",
+		"parameters": [
+			{
+				"name": "[keygroupname]",
+				"description": "name of the keygroup you want to list (optional)."
+			}
+		]
+	},
+	"es_keysetvalue": {
+		"command": "es_keysetvalue",
+		"syntax": "es_keysetvalue [keygroup] <key> <valuename> <value>",
+		"description": "Set a value from the specified valuename in a specific key.",
+		"parameters": [
+			{
+				"name": "keygroup",
+				"description": "Name of the  that the valuename resides."
+			},
+			{
+				"name": "key",
+				"description": "Name of the  that the valuename resides."
+			},
+			{
+				"name": "valuename",
+				"description": "Name of the value."
+			},
+			{
+				"name": "value",
+				"description": "Text, numbers."
+			}
+		]
+	},
+	"es_lightstyle": {
+		"command": "es_lightstyle",
+		"syntax": "es_lightstyle <stylenum> <stylestring>",
+		"description": "Changes the lightstyle for a map.",
+		"parameters": [
+			{
+				"name": "stylenum",
+				"description": "The lightstyle to change (between 0 and 63). Usually 0. Please share your info if you test other values."
+			},
+			{
+				"name": "stylestring",
+				"description": "Type of lighting (between \"a\" and \"z\"), with \"a\" the brightest lighting and \"z\" the darker lighting. It's also possible to use more than one character to schedule a lighting cycle."
+			}
+		]
+	},
+	"es_load": {
+		"command": "es_load",
+		"syntax": "es_load [scriptname]",
+		"description": "Loads a script addon file from the directory gamedir/addons/eventscripts/scriptname/es_scriptname.txt - load will fail if the script is already loaded or does not exist in that directory. Causes the block load block of the script to be invoked to allow the script addon to initialize.",
+		"parameters": [
+			{
+				"name": "es_load",
+				"description": "scriptnamename of the script to load into memory. If this argument is not provided,  provides a list of loaded script addons in the console."
+			}
+		]
+	},
+	"es_loadevents": {
+		"command": "es_loadevents",
+		"syntax": "es_loadevents [declare] <res-file>",
+		"description": "Registers a list of events, described in a .res file, either as a provider or subscriber.",
+		"parameters": [
+			{
+				"name": "declare",
+				"description": "If this is provided, the .res file should be a list of events your script will broadcast for other script consumers."
+			},
+			{
+				"name": "res-file",
+				"description": "A .res file in KeyValues format that defines event names and event variables (e.g. in the format of modevents.res). If declare is not used, this file is a list of events that you want EventScripts to listen for from Source."
+			}
+		]
+	},
+	"es_log": {
+		"command": "es_log",
+		"syntax": "es_log <message>",
+		"description": "Broadcasts a text message to the server console and saves it into the logfile.",
+		"parameters": [
+			{
+				"name": "message",
+				"description": "the text  you wish to broadcast"
+			}
+		]
+	},
+	"es_logv": {
+		"command": "es_logv",
+		"syntax": "es_logv <message-variable>",
+		"description": "Broadcasts a text message to the server console and saves it into the logfile. The message is stored inside the message-variable.",
+		"parameters": [
+			{
+				"name": "message-variable",
+				"description": "the variable that contains the text message you wish to broadcast"
+			}
+		]
+	},
+	"es_makepublic": {
+		"command": "es_makepublic",
+		"syntax": "es_makepublic <variable>",
+		"description": "Makes a cvar public so you can see it on HLSW or game-monitor (good for version numbers etc)",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "the varible you wish to make public"
+			}
+		]
+	},
+	"es_math": {
+		"command": "es_math",
+		"syntax": "es_math <variable> <operator> [value]",
+		"description": "Performs a math operation on value and places it in variable. Some math operations do not need a value.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": " where you want to store the value of math operation"
+			},
+			{
+				"name": "operator",
+				"description": "Can be any of the following"
+			},
+			{
+				"name": "value",
+				"description": "Used with some math operations as called out above"
+			}
+		]
+	},
+	"es_mathparse": {
+		"command": "es_mathparse",
+		"syntax": "es_mathparse <output-variable> \"<math-expression>\"",
+		"description": "Stores the result of a mathmatical expression in the output variable.",
+		"parameters": [
+			{
+				"name": "output-variable",
+				"description": "Stores the output of the mathmatical expression"
+			},
+			{
+				"name": "math-expression",
+				"description": "A mathmatical expression of numbers, server variables, and common mathmatical functions."
+			}
+		]
+	},
+	"es_menu": {
+		"command": "es_menu",
+		"syntax": "es_menu <duration> <userid> \"<menutext>\" [numberkeys]",
+		"description": "Displays an on-screen HUD menu in Counter-Strike: Source using the menutext you specify.",
+		"parameters": [
+			{
+				"name": "duration",
+				"description": "the number of seconds the menu should stay up. Use 0 for indefinitely."
+			},
+			{
+				"name": "userid",
+				"description": "the  you wish to show the menu to"
+			},
+			{
+				"name": "menutext",
+				"description": "\"\"this is the text you want to show in the menu. Enclose it in quotes and use \\n wherever you wish a new line to begin in the menu."
+			},
+			{
+				"name": "numberkeys",
+				"description": "A string of all  you want to use. If somebody presses a numberkey not in the string, the menu will stay."
+			}
+		]
+	},
+	"es_mexec": {
+		"command": "es_mexec",
+		"syntax": "es_mexec <path/script>",
+		"description": "Executes silently a .cfg script from your cstrike folder (very useful to execute internal config files)",
+		"parameters": [
+			{
+				"name": "path/script",
+				"description": "the location and the name of the script"
+			}
+		]
+	},
+	"es_msg": {
+		"command": "es_msg",
+		"syntax": "es_msg [color] <message>",
+		"description": "Broadcasts a text message to the chat area for every client. In Counter-Strike: Source it includes options for coloring the text.",
+		"parameters": [
+			{
+				"name": "color",
+				"description": "the name of the  option. If not provided, the text is printed in the default  (yellow). The following  values are supported:"
+			},
+			{
+				"name": "message",
+				"description": "the text  you wish to broadcast"
+			}
+		]
+	},
+	"es_physics": {
+		"command": "es_physics",
+		"syntax": "es_physics <get/set/active> [params]",
+		"description": "Allows limited manipulated of physics objects",
+		"parameters": [
+			{
+				"name": "get/set/active",
+				"description": "action to perform on object"
+			},
+			{
+				"name": "params",
+				"description": "action parameters as outlined below"
+			}
+		]
+	},
+	"es_playsound": {
+		"command": "es_playsound",
+		"syntax": "es_playsound <userid> <sound> <volume>",
+		"description": "Plays a sound to specified user.",
+		"parameters": [
+			{
+				"name": "userid",
+				"description": "Userid of player the sound will be played for."
+			},
+			{
+				"name": "sound",
+				"description": "Soundfile you want to have played."
+			},
+			{
+				"name": "volume",
+				"description": "volume of the sound (max: 1.0) (defaults to 0)"
+			}
+		]
+	},
+	"es_precachemodel": {
+		"command": "es_precachemodel",
+		"syntax": "es_precachemodel <variable> <model-path-and-name>",
+		"description": "Precaches a model to memory so it can be immediately loaded when used. Saves the #index number into variable",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "Variable you want to store then #index number into."
+			},
+			{
+				"name": "model-path-and-name",
+				"description": "Name and path to the model."
+			}
+		]
+	},
+	"es_prop_dynamic_create": {
+		"command": "es_prop_dynamic_create",
+		"syntax": "es_prop_dynamic_create <userid> <model>",
+		"description": "Creates the specified model at the coordinates the player is looking.",
+		"parameters": [
+			{
+				"name": "userid",
+				"description": "The player to create the model."
+			},
+			{
+				"name": "model",
+				"description": "The directory and filename of the model to be created."
+			}
+		]
+	},
+	"es_prop_physics_create": {
+		"command": "es_prop_physics_create",
+		"syntax": "es_prop_physics_create <userid> <model>",
+		"description": "Creates the specified model at the coordinates the player is looking.",
+		"parameters": [
+			{
+				"name": "userid",
+				"description": "The player to create the model."
+			},
+			{
+				"name": "model",
+				"description": "The directory and filename of the model to be created."
+			}
+		]
+	},
+	"es_queryclientvar": {
+		"command": "es_queryclientvar",
+		"syntax": "es_queryclientvar <userid> <varname>",
+		"description": "Submits a query to the userid for the value of the console variable specified. It will return the result of the query in the event es_player_variable.",
+		"parameters": [
+			{
+				"name": "userid",
+				"description": " of the user whose variable you want to query"
+			},
+			{
+				"name": "varname",
+				"description": "name of the network-related client-side variable you'd like to query"
+			}
+		]
+	},
+	"es_rand": {
+		"command": "es_rand",
+		"syntax": "es_rand <variable> <min> <max>",
+		"description": "Creates a random integer between min and max",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "a  where you wish to store the integer"
+			},
+			{
+				"name": "min",
+				"description": "the smallest number you wish to get"
+			},
+			{
+				"name": "max",
+				"description": "the largest number you wish to get"
+			}
+		]
+	},
+	"es_regclientcmd": {
+		"command": "es_regclientcmd",
+		"syntax": "es_regclientcmd <command> <script>/<block> \"<description>\"",
+		"description": "Registers a client command that will initiate the specified block of code upon use, passing its parameters.",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "Name of the client  you want to create on the server-side console."
+			},
+			{
+				"name": "script",
+				"description": "Name of the  that you want to initiate the block inside of."
+			},
+			{
+				"name": "block",
+				"description": "Name of the  that you want to initiate."
+			},
+			{
+				"name": "description",
+				"description": "A short  of what the command does."
+			}
+		]
+	},
+	"es_regcmd": {
+		"command": "es_regcmd",
+		"syntax": "es_regcmd <command> <script>/<block> \"<description>\"",
+		"description": "Registers a console command that can be issued server-side that will initiate the specified block of code upon use, passing it parameters. This command allows scripts to create their own reusable commands for rcon or other scripts to use.",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "Name of the  you want to create on the server-side console."
+			},
+			{
+				"name": "script",
+				"description": "Name of the  that you want to initiate the block inside of."
+			},
+			{
+				"name": "block",
+				"description": "Name of the  that you want to initiate."
+			},
+			{
+				"name": "description",
+				"description": "A short  of what the command does."
+			}
+		]
+	},
+	"es_regex_match": {
+		"command": "es_regex_match",
+		"syntax": "es_regex match <variable> <expression> <string>",
+		"description": "Returns the number of characters that matched the regular expression within the string.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "the name of the  to store the number of characters that matched."
+			},
+			{
+				"name": "expression",
+				"description": "a regular /pattern to match against"
+			},
+			{
+				"name": "string",
+				"description": " -- the  to search"
+			}
+		]
+	},
+	"es_regex_matchformat": {
+		"command": "es_regex_matchformat",
+		"syntax": "es_regex matchformat <variable> <expression> <string> <formatstring>",
+		"description": "Compare the string with the regular expression, put the tokens into the formatstring and save the resultstring into variable",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "the name of the  to store the resulting string in"
+			},
+			{
+				"name": "expression",
+				"description": "a regular /pattern to match against"
+			},
+			{
+				"name": "string",
+				"description": " -- the  to compare with"
+			},
+			{
+				"name": "formatstring",
+				"description": " -- string where tokens found with the regular expressions are put in."
+			}
+		]
+	},
+	"es_regex_search": {
+		"command": "es_regex_search",
+		"syntax": "es_regex search <variable> <expression> <string> [start] [range]",
+		"description": "Searches for a regular expression within a certain section of the string.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "the name of the  to store the position that matched."
+			},
+			{
+				"name": "expression",
+				"description": "a regular /pattern to match against"
+			},
+			{
+				"name": "string",
+				"description": " -- the  to search"
+			},
+			{
+				"name": "start",
+				"description": " -- optional position in the string to begin the search"
+			},
+			{
+				"name": "range",
+				"description": " -- optional length from start for the number of characters to search"
+			}
+		]
+	},
+	"es_regsaycmd": {
+		"command": "es_regsaycmd",
+		"syntax": "es_regsaycmd <command> <script>/<block> \"<description>\"",
+		"description": "Registers a say command that will initiate the specified block of code upon use, passing its parameters. The command will not be displayed via say/say_team",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "Name of the say  you want to create on the server-side console."
+			},
+			{
+				"name": "script",
+				"description": "Name of the  that you want to initiate the block inside of."
+			},
+			{
+				"name": "block",
+				"description": "Name of the  that you want to initiate."
+			},
+			{
+				"name": "description",
+				"description": "A short  of what the command does."
+			}
+		]
+	},
+	"es_reload": {
+		"command": "es_reload",
+		"syntax": "es_reload [scriptname]",
+		"description": "Unloads and then loads a script addon file from the directory gamedir/addons/eventscripts/scriptname/es_scriptname.txt - Causes the block load block of the script to be invoked to allow the script addon to (re)initialize.",
+		"parameters": [
+			{
+				"name": "scriptname",
+				"description": "name of the script to reload into memory."
+			}
+		]
+	},
+	"es_remove": {
+		"command": "es_remove",
+		"syntax": "es_remove <entity>",
+		"description": "Removes the first instance of the named entity from the map.",
+		"parameters": [
+			{
+				"name": "entity",
+				"description": "name of the  you want to remove."
+			}
+		]
+	},
+	"es_set": {
+		"command": "es_set",
+		"syntax": "es_set <variable-name> <value> [description]",
+		"description": "Creates and/or sets the named variable to the value. If the variable is created for the first time, it will also optionally set its internal description for reference.",
+		"parameters": [
+			{
+				"name": "variable-name",
+				"description": "the name of the variable to create and/or set"
+			},
+			{
+				"name": "value",
+				"description": "the value the variable should become"
+			},
+			{
+				"name": "description",
+				"description": "Optional: Sets the internal description for the variable."
+			}
+		]
+	},
+	"es_setang": {
+		"command": "es_setang",
+		"syntax": "es_setang <userid> <pitch> <yaw> <roll>",
+		"description": "Sets the specified userid's angle of vision to pitch/yaw/roll",
+		"parameters": [
+			{
+				"name": "userid",
+				"description": "Userid of player you wish to teleport"
+			},
+			{
+				"name": "pitch",
+				"description": "The  of where you want them to face"
+			},
+			{
+				"name": "yaw",
+				"description": "The  of where you want them to face"
+			},
+			{
+				"name": "roll",
+				"description": "The  of where you want them to face"
+			}
+		]
+	},
+	"es_setindexprop": {
+		"command": "es_setindexprop",
+		"syntax": "es_setindexprop <index> \"<property>\" <value>",
+		"description": "Set the value of a class property from the entity defined by index.",
+		"parameters": [
+			{
+				"name": "index",
+				"description": "Index of the entity to assign the property to."
+			},
+			{
+				"name": "property",
+				"description": "Direct name of the variable from source, i.e. CBaseCombatWeapon.m_hOwner (id of player holding the weapon)"
+			},
+			{
+				"name": "value",
+				"description": "Value to assign to the property."
+			}
+		]
+	},
+	"es_setinfo": {
+		"command": "es_setinfo",
+		"syntax": "es_setinfo <variable-name> <value>",
+		"description": "Allows you to create server variables that are essential for doing calculations. It can also set the value of existing variables.",
+		"parameters": [
+			{
+				"name": "variable-name",
+				"description": "the name of the variable to create and/or set"
+			},
+			{
+				"name": "value",
+				"description": "the  the variable should become"
+			}
+		]
+	},
+	"es_setplayerprop": {
+		"command": "es_setplayerprop",
+		"syntax": "es_setplayerprop <userid> \"<property>\" <value>",
+		"description": "Set the value of a class property for a player.",
+		"parameters": [
+			{
+				"name": "userid",
+				"description": "Userid of the user to assign the property to."
+			},
+			{
+				"name": "property",
+				"description": "Direct name of the variable from source, i.e. CCSPlayer.m_iAccount (money that a CS:S player has)"
+			},
+			{
+				"name": "value",
+				"description": "Value to assign to the property."
+			}
+		]
+	},
+	"es_setpos": {
+		"command": "es_setpos",
+		"syntax": "es_setpos <userid> <x> <y> <z>",
+		"description": "Teleports the specified userid to x, y, z location",
+		"parameters": [
+			{
+				"name": "userid",
+				"description": "Userid of player you wish to teleport"
+			},
+			{
+				"name": "x",
+				"description": "X coordinate to teleport on the map"
+			},
+			{
+				"name": "y",
+				"description": "Y coordinate to teleport on the map"
+			},
+			{
+				"name": "z",
+				"description": "Z coordinate to teleport on the map"
+			}
+		]
+	},
+	"es_setview": {
+		"command": "es_setview",
+		"syntax": "es_setview <userid> <entity-id>",
+		"description": "Attaches a players view to an entity",
+		"parameters": [
+			{
+				"name": "userid",
+				"description": "The user whose view will be changed."
+			},
+			{
+				"name": "entity-id",
+				"description": "The entity to which the player's view will now be attached"
+			}
+		]
+	},
+	"es_sexec": {
+		"command": "es_sexec",
+		"syntax": "es_sexec <userid> <command>",
+		"description": "Executes a command on the server on behalf of the user. The command is not sent to the client as with es_cexec.",
+		"parameters": [
+			{
+				"name": "userid",
+				"description": " of the player who you wish to emulate"
+			},
+			{
+				"name": "command",
+				"description": "the  you wish the server to execute on behalf of the player."
+			}
+		]
+	},
+	"es_sexec_all": {
+		"command": "es_sexec_all",
+		"syntax": "es_sexec_all <command>",
+		"description": "Executes a command on the server on behalf of all users. The command is not sent to the client as with es_cexec_all.",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "the  you wish the server to execute on behalf of the players."
+			}
+		]
+	},
+	"es_soon": {
+		"command": "es_soon",
+		"syntax": "es_soon <command>",
+		"description": "Places the command at the end of the current command-queue. Runs sooner than es_delayed 0.00001, but isn't \"in-line\" like a normal command. Pretty much like you typed the command at the console. Be careful with event_var()'s just as you would be with es_delayed.",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "Command to do soon"
+			}
+		]
+	},
+	"es_splitvectorstring": {
+		"command": "es_splitvectorstring",
+		"syntax": "es_splitvectorstring <var x> <var y> <var z> <vectorstring>",
+		"description": "Splits a vector string into the individual points x, y, and z.",
+		"parameters": [
+			{
+				"name": "vectorstring",
+				"description": "the name of the variable where the vector string is stored."
+			},
+			{
+				"name": "x",
+				"description": "the name of the variable which will hold the  position."
+			},
+			{
+				"name": "y",
+				"description": "the name of the variable which will hold the  position."
+			},
+			{
+				"name": "z",
+				"description": "the name of the variable which will hold the  position."
+			}
+		]
+	},
+	"es_sql_close": {
+		"command": "es_sql_close",
+		"syntax": "es_sql close <db-name>",
+		"description": "Closes and flushes the database data to disk.",
+		"parameters": [
+			{
+				"name": "db-name",
+				"description": "The name of the database to close"
+			}
+		]
+	},
+	"es_sql_open": {
+		"command": "es_sql_open",
+		"syntax": "es_sql open <db-name> [dbdir]",
+		"description": "Opens or creates a SQLite database file by the name of es_db-name.sqldb in the directory mentioned.",
+		"parameters": [
+			{
+				"name": "db-name",
+				"description": "The name of the database to open. The  should be referenced in all future es_sql statements."
+			},
+			{
+				"name": "[dbdir]",
+				"description": "Directory of the database file on disk, supports same syntax as keygroup databases, e.g. \"\u00a6servermail\"). You can also specify \":memory:\" (with quotes) to store the DB only in memory."
+			}
+		]
+	},
+	"es_sql_query": {
+		"command": "es_sql_query",
+		"syntax": "es_sql query <db-name> [result-keygroup] \"<SQL-statement>\"",
+		"description": "Executes a SQL statement against a SQLite database and returns the results, optionally, in a keygroup.",
+		"parameters": [
+			{
+				"name": "db-name",
+				"description": "The name of the database to query. The database must have been opened first by a call to es_sql open"
+			},
+			{
+				"name": "[result-keygroup]",
+				"description": "A keygroup can be created to store the results of the SQL statement."
+			},
+			{
+				"name": "\"SQL-statement",
+				"description": "A SQL statement that conforms to the Structured Query Language (SQL) syntax supported by SQLite3. Must be in quotation marks, with strings in single quotes,"
+			}
+		]
+	},
+	"es_sql_queryvalue": {
+		"command": "es_sql_queryvalue",
+		"syntax": "es_sql queryvalue <db-name> <variable> \"<SQL-string>\"",
+		"description": "Same as es_sql query, but stores only the first row/column value into variable. Useful for COUNT()/SUM() queries.",
+		"parameters": [
+			{
+				"name": "db-name",
+				"description": "The name of the database to query. The database must have been opened first by a call to es_sql open"
+			},
+			{
+				"name": "variable",
+				"description": "A  to store the value into."
+			},
+			{
+				"name": "\"SQL-string",
+				"description": "A SQL statement that conforms to the Structured Query Language (SQL) syntax supported by SQLite3. Must be in quotation marks, with strings in single quotes."
+			}
+		]
+	},
+	"es_stopsound": {
+		"command": "es_stopsound",
+		"syntax": "es_stopsound <userid> <soundname>",
+		"description": "Stops the specified sound playing for a user.",
+		"parameters": [
+			{
+				"name": "userid",
+				"description": "the player for which to stop the sound"
+			},
+			{
+				"name": "soundname",
+				"description": "path to the sound that played"
+			}
+		]
+	},
+	"es_strcmp": {
+		"command": "es_strcmp",
+		"syntax": "es_strcmp <variable> <string-left> <string-right>",
+		"description": "Compares two strings lexigraphically. Returns in variable a value <0 if string-left comes before string-right, 0 if they're the same, or >0 if string-right comes first.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": " to store return value"
+			},
+			{
+				"name": "string-left",
+				"description": "First string to compare"
+			},
+			{
+				"name": "string-right",
+				"description": "String to compare against string-left."
+			}
+		]
+	},
+	"es_string": {
+		"command": "es_string",
+		"syntax": "es_string <variable> <operator> <value> <value2>",
+		"description": "Performs a string operation on value and places it in variable.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": " where you want to both retrieve and store the value of the string operation"
+			},
+			{
+				"name": "operator",
+				"description": "Can be any of the following"
+			},
+			{
+				"name": "value",
+				"description": "Used with some string operations as called out above"
+			},
+			{
+				"name": "value2",
+				"description": "Used with string operations as called out above."
+			}
+		]
+	},
+	"es_stringtable": {
+		"command": "es_stringtable",
+		"syntax": "es_stringtable",
+		"description": "Adds a string to the stringtable shared by server and clients.",
+		"parameters": [
+			{
+				"name": "tablename",
+				"description": "The name of the string table to add the string"
+			},
+			{
+				"name": "string",
+				"description": " to write to the table"
+			}
+		]
+	},
+	"es_strlen": {
+		"command": "es_strlen",
+		"syntax": "es_strlen <variable> \"<string>\"",
+		"description": "Stores the length of the string into var.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "Name of the  you wish to store the number length of the string in."
+			},
+			{
+				"name": "string",
+				"description": "The text that you want to measure the length of."
+			}
+		]
+	},
+	"es_tell": {
+		"command": "es_tell",
+		"syntax": "es_tell <userid> [color] <message>",
+		"description": "Sends message to a single player by userid. If color is specified, it must be \"#lightgreen\", \"#green\", or \"#multi\" (see color under Parameters).",
+		"parameters": [
+			{
+				"name": "userid",
+				"description": "ID of player to send the message to"
+			},
+			{
+				"name": "color",
+				"description": "Color to make the text. If text is going to be multied then use #multi and specify the s in the message."
+			},
+			{
+				"name": "message",
+				"description": "Message to send. Can contain colors."
+			}
+		]
+	},
+	"es_token": {
+		"command": "es_token",
+		"syntax": "es_token <variable> <string> <token#> [seperator-character]",
+		"description": "Sets a variable to the part of the string corresponding with token#. It splits up the string according to the seperator-character which defaults to space.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "Variable where you want to store the token."
+			},
+			{
+				"name": "string",
+				"description": "String that contains the tokens that you want to extract."
+			},
+			{
+				"name": "token#",
+				"description": "Specific token that is extracted from the string."
+			},
+			{
+				"name": "seperator-character",
+				"description": "Character that separates the tokens in the string. If this argument is omitted, a space is considered the separator."
+			}
+		]
+	},
+	"es_toptext": {
+		"command": "es_toptext",
+		"syntax": "es_toptext <userid> <duration> [color] <message>",
+		"description": "Displays a text message in the upper left hand corner of the player's screen.",
+		"parameters": [
+			{
+				"name": "userid",
+				"description": "user id of the player that will get the message."
+			},
+			{
+				"name": "duration",
+				"description": "the amount of time the message will be displayed."
+			},
+			{
+				"name": "color",
+				"description": "optionaldisplays in white if left out."
+			},
+			{
+				"name": "message",
+				"description": "the  to be displayed to the player."
+			}
+		]
+	},
+	"es_trick greenblock": {
+		"command": "es_trick greenblock",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_uninstall": {
+		"command": "es_uninstall",
+		"syntax": "es_uninstall [basename]",
+		"description": "Uninstalls addons installed with es_install",
+		"parameters": [
+			{
+				"name": "basename",
+				"description": " of addon to uninstall"
+			}
+		]
+	},
+	"es_unload": {
+		"command": "es_unload",
+		"syntax": "es_unload [scriptname]",
+		"description": "Unloads a script addon file that had previously been loaded by es_load. Causes the block unload in the script to be invoked shortly before the script addon is unloaded from memory.",
+		"parameters": [
+			{
+				"name": "scriptname",
+				"description": "name of the script to unload from memory."
+			}
+		]
+	},
+	"es_unregclientcmd": {
+		"command": "es_unregclientcmd",
+		"syntax": "es_unregclientcmd <command>",
+		"description": "Unregisters a client command created by es_regclientcmd.",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "Name of the client  you want to unreg."
+			}
+		]
+	},
+	"es_unregsaycmd": {
+		"command": "es_unregsaycmd",
+		"syntax": "es_unregsaycmd <command>",
+		"description": "Unregisters a client say command created by es_regsaycmd.",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "Name of the client say  you want to unreg."
+			}
+		]
+	},
+	"es_update": {
+		"command": "es_update",
+		"syntax": "es_update [basename] [force]",
+		"description": "Updates addons installed with es_install",
+		"parameters": [
+			{
+				"name": "basename",
+				"description": " of addon to update"
+			},
+			{
+				"name": "force",
+				"description": "nonzero to  an update of the addon (ignore version info)"
+			}
+		]
+	},
+	"es_usermsg": {
+		"command": "es_usermsg",
+		"syntax": "es_usermsg <operation> [data-type] <msg-name> [value]",
+		"description": "The command is a very low-level command for sending special messages to players.",
+		"parameters": [
+			{
+				"name": "operation",
+				"description": "The action to be performed (can be either create, write, send or delete)."
+			},
+			{
+				"name": "data-type",
+				"description": "The class of the action (can be byte, char, float, short and string)."
+			},
+			{
+				"name": "msg-name",
+				"description": "The variable name of the es_usermsg (stated when the usermsg is created)."
+			},
+			{
+				"name": "value",
+				"description": "The new  of the operation."
+			}
+		]
+	},
+	"es_voicechat": {
+		"command": "es_voicechat",
+		"syntax": "es_voicechat <islistening/listen/nolisten> <params>",
+		"description": "",
+		"parameters": []
+	},
+	"es_xnq": {
+		"command": "es_xnq",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"escinject": {
+		"command": "escinject",
+		"syntax": "escinject <command> <variable> <string>",
+		"description": "Escape special characters from <string> depending on <command> and store the result in <variable>",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "Must be:"
+			},
+			{
+				"name": "variable",
+				"description": "In what  store the result in"
+			},
+			{
+				"name": "string",
+				"description": "The  you want to edit"
+			}
+		]
+	},
+	"esnq": {
+		"command": "esnq",
+		"syntax": "esnq <string>",
+		"description": "Behaves just like \"es\" except that it will only place quotation marks around server_var() and event_var() values if there is a semicolon inside them.",
+		"parameters": [
+			{
+				"name": "WITHOUT",
+				"description": "In the example, the rcon_address is sent  quotes around it, whereas using es would have sent: rcon_address \"123.456.789\""
+			},
+			{
+				"name": "esnq",
+				"description": " rcon_address server_var(server_address)"
+			}
+		]
+	},
+	"event initialize": {
+		"command": "event initialize",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"eventscripts_addondir": {
+		"command": "eventscripts_addondir",
+		"syntax": "eventscripts_addondir <none>",
+		"description": "Contains the full path to the EventScripts addon directory",
+		"parameters": [
+			{
+				"name": "eventscripts_addondir",
+				"description": " was not introduced until ES 2.0"
+			}
+		]
+	},
+	"eventscripts_gamedir": {
+		"command": "eventscripts_gamedir",
+		"syntax": "eventscripts_gamedir <none>",
+		"description": "Contains the full path to the game directory (i.e. in Counter-Strike this is the full path to the ./cstrike/ directory)",
+		"parameters": [
+			{
+				"name": "eventscripts_gamedir",
+				"description": " was not introduced until ES 2.0"
+			}
+		]
+	},
+	"eventscripts_protectrcon": {
+		"command": "eventscripts_protectrcon",
+		"syntax": "eventscripts_protectrcon <1/0>",
+		"description": "Add FCVAR_PROTECTED flag to rcon_password so that it will resolve properly.",
+		"parameters": [
+			{
+				"name": "1/0",
+				"description": "Enables and disables the protection of your rcon password"
+			}
+		]
+	},
+	"eventscripts_register": {
+		"command": "eventscripts_register",
+		"syntax": "eventscripts_register <scriptpack>",
+		"description": "Registers a scriptpack into your server",
+		"parameters": [
+			{
+				"name": "scriptpack",
+				"description": "Name of the script pack you would like to start"
+			}
+		]
+	},
+	"eventscripts_subdirectory": {
+		"command": "eventscripts_subdirectory",
+		"syntax": "eventscripts_subdirectory <path-in-datadirectory>",
+		"description": "Makes a subdirectory for eventscripts only",
+		"parameters": [
+			{
+				"name": "path-in-datadirectory",
+				"description": "Path starting from your datadirectory (usually cfg) to where you want your scriptpacks to be registered from"
+			}
+		]
+	},
+	"eventscripts_unregister": {
+		"command": "eventscripts_unregister",
+		"syntax": "eventscripts_unregister <scriptpack>",
+		"description": "Unregisters a scriptpack from the server",
+		"parameters": [
+			{
+				"name": "message",
+				"description": "scriptpackName of the script pack you would like to stop"
+			}
+		]
+	},
+	"eventscripts_ver": {
+		"command": "eventscripts_ver",
+		"syntax": "eventscripts_ver <none>",
+		"description": "Prints Eventscripts version information in console",
+		"parameters": [
+			{
+				"name": "eventscripts_ver",
+				"description": " is a public variable denoting the EventScripts version."
+			},
+			{
+				"name": "Tools like HLSW and Game-Monitor can see this variable in the variable list.",
+				"description": ""
+			}
+		]
+	},
+	"exp": {
+		"command": "exp",
+		"syntax": "exp <servercommand>",
+		"description": "Will execute servercommand on the server after expanding the following things:",
+		"parameters": [
+			{
+				"name": "server_var(",
+				"description": "<variable>)inserts value of <variable>"
+			},
+			{
+				"name": "sv(",
+				"description": "<variable>)inserts value of <variable>"
+			},
+			{
+				"name": "event_var(",
+				"description": "<event-variable>)inserts value of <event-variable>"
+			},
+			{
+				"name": "ev(",
+				"description": "<event-variable>)inserts value of <event-variable>"
+			},
+			{
+				"name": "nq(",
+				"description": "<string>)inserts <string> with all quote marks removed"
+			},
+			{
+				"name": "eq(",
+				"description": "<string>)inserts <string> surrounded by single set of quote marks"
+			},
+			{
+				"name": "cond(",
+				"description": "<value1> <operator> <value2>)inserts 0 or 1 depending on whether condition is true or false"
+			},
+			{
+				"name": "ins(",
+				"description": "<0/1> <string0> <string1>)inserts <string0> or <string1> depending on <0/1>"
+			},
+			{
+				"name": "define(",
+				"description": "<variable>)sets <variable> to 0, then reinserts variable name"
+			},
+			{
+				"name": "userid(",
+				"description": "<identifying-info>)inserts userid of <identifying-info>"
+			},
+			{
+				"name": "steamid(",
+				"description": "<userid>)inserts steamID of <userid>"
+			},
+			{
+				"name": "username(",
+				"description": "<userid>)inserts username of <userid>"
+			},
+			{
+				"name": "rand(",
+				"description": "<min> <max>)inserts random integer between <min> and <max>"
+			},
+			{
+				"name": "strlen(",
+				"description": "<string>)inserts the length of the string"
+			},
+			{
+				"name": "token(",
+				"description": "<string> <token#> [seperator-character])inserts token <token#> of <string>"
+			},
+			{
+				"name": "string(",
+				"description": "<operator> <value> <value2>)inserts result of 'es_string' command"
+			},
+			{
+				"name": "keyval(",
+				"description": "[keygroup] <key> <valuename>)inserts key value"
+			},
+			{
+				"name": "math(",
+				"description": "<number1> <operator> [number2])inserts result of 'es_math' command"
+			},
+			{
+				"name": "mathparse(",
+				"description": "<math-expression>)inserts result of 'es_mathparse' command"
+			},
+			{
+				"name": "exists(",
+				"description": "<type> <info>)inserts whether or not <info> exists"
+			},
+			{
+				"name": "indexprop(",
+				"description": "<index> <property>)inserts result of 'es_getindexprop' command"
+			},
+			{
+				"name": "entityindex(",
+				"description": "<entity-name>)inserts result of 'es_getentityindex' command"
+			},
+			{
+				"name": "playerinfo(",
+				"description": "<userid> <property>)inserts playerinfo <property> for <userid>"
+			},
+			{
+				"name": "playerget(",
+				"description": "<subcommand> <parameters>)inserts result of 'playerget' command"
+			},
+			{
+				"name": "playerprop(",
+				"description": "<userid> <property>)inserts result of 'es_getplayerprop' command"
+			},
+			{
+				"name": "playerxloc(",
+				"description": "<userid>)inserts x coordinate of <userid>"
+			},
+			{
+				"name": "playeryloc(",
+				"description": "<userid>)inserts y coordinate of <userid>"
+			},
+			{
+				"name": "playerzloc(",
+				"description": "<userid>)inserts z coordinate of <userid>"
+			},
+			{
+				"name": "isbot(",
+				"description": "<userid>)inserts whether <userid> is a bot"
+			},
+			{
+				"name": "isnumerical(",
+				"description": "<string>)inserts whether <string> is numerical"
+			},
+			{
+				"name": "botname(",
+				"description": "<userid>)inserts result of 'botname' command"
+			},
+			{
+				"name": "isnull(",
+				"description": "<variable>)inserts whether <variable> is null"
+			},
+			{
+				"name": "textlib(",
+				"description": "<subcommand> <parameters>)inserts result of 'textlib' command"
+			},
+			{
+				"name": "uniqueid(",
+				"description": "<userid>)inserts unique id of <userid>"
+			},
+			{
+				"name": "average(",
+				"description": "[type] <num1 num2 numN>)inserts result of 'average' command"
+			},
+			{
+				"name": "playervar(",
+				"description": "<userid> <variable-name>)inserts value of playervar <variable-name> for <userid>"
+			},
+			{
+				"name": "randplayer(",
+				"description": "<team-index>)inserts a random player userid from <team-index>"
+			}
+		]
+	},
+	"forcecase": {
+		"command": "forcecase",
+		"syntax": "forcecase <variable> <upper/lower>",
+		"description": "Returns a string in upper or lower case.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "the  that provides and returns the string you want to force to upper or lower case"
+			},
+			{
+				"name": "upper/lower",
+				"description": " defines the forced case"
+			}
+		]
+	},
+	"foreach": {
+		"command": "foreach",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"foreach part": {
+		"command": "foreach part",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"foreach player": {
+		"command": "foreach player",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"foreach token": {
+		"command": "foreach token",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"foreach weapon": {
+		"command": "foreach weapon",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"getbotname": {
+		"command": "getbotname",
+		"syntax": "getbotname <var> <userid>",
+		"description": "Gets the base name of a bot and puts it into a variable (ie: without a prefix).",
+		"parameters": [
+			{
+				"name": "var",
+				"description": "the iable that will hold the base name of userid"
+			},
+			{
+				"name": "userid",
+				"description": "the  of whos name you want to get"
+			}
+		]
+	},
+	"getplayercount": {
+		"command": "getplayercount",
+		"syntax": "getplayercount <return-var> <filter>",
+		"description": "Gets the player count of the server using foreach player filters.",
+		"parameters": [
+			{
+				"name": "return-var",
+				"description": "Variable which will store the player's steamid"
+			},
+			{
+				"name": "filter",
+				"description": "foreach player "
+			}
+		]
+	},
+	"getplayerinfo": {
+		"command": "getplayerinfo",
+		"syntax": "getplayerinfo <variable> <userid> <infotype>",
+		"description": "Get a specific information from player and store it into variable.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "Variable to store the info in."
+			},
+			{
+				"name": "userid",
+				"description": "Userid of player you want to get the info from."
+			},
+			{
+				"name": "infotype",
+				"description": "Name of infoline (see es_createplayerlist )"
+			}
+		]
+	},
+	"getrandplayer": {
+		"command": "getrandplayer",
+		"syntax": "getrandplayer <variable> <identifier>",
+		"description": "Stores a random userid in variable based on the identifier you specify. You can also use it with an es before it to expand variables.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "a  where you wish to store the userid"
+			},
+			{
+				"name": "identifier",
+				"description": "the target player/group/sort of players"
+			}
+		]
+	},
+	"if": {
+		"command": "if",
+		"syntax": "if (<value1> <operator> <value2>) then <command>",
+		"description": "Will execute command if the expression/condition in parentheses is is true.",
+		"parameters": [
+			{
+				"name": "value1",
+				"description": "A string or numeric value to compare against value2"
+			},
+			{
+				"name": "operator",
+				"description": "if supports the following conditional s:"
+			},
+			{
+				"name": "value2",
+				"description": "A string or numeric value to compare against value1"
+			},
+			{
+				"name": "command",
+				"description": "Command to execute if the condition is true. Can be a single  or use es_doblock to do several s. Can also use several s if you use a do block. (See Examples)"
+			}
+		]
+	},
+	"ifx": {
+		"command": "ifx",
+		"syntax": "ifx <command>(<variable or mathparse>) do",
+		"description": "Will execute the do { } block depending on the <command>.",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "Must be:"
+			}
+		]
+	},
+	"inrange": {
+		"command": "inrange",
+		"syntax": "inrange <variable> <value1> <range> <value2>",
+		"description": "Checks to see if <value1> is within +-<range> of <value2> and outputs 1 if true, or 0 if false, to <variable>.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "This is the return  for the result. 1 if true, 0 if false"
+			},
+			{
+				"name": "value1",
+				"description": "This is the number you want to check the range on."
+			},
+			{
+				"name": "range",
+				"description": "This is the allowable  to check for value1."
+			},
+			{
+				"name": "value2",
+				"description": "This is the number that value1 must be within range of."
+			}
+		]
+	},
+	"isnull": {
+		"command": "isnull",
+		"syntax": "isnull <return var> <test var>",
+		"description": "Checks a variable to see whether it is null or not (i.e. \"\" not just 0)",
+		"parameters": [
+			{
+				"name": "return cvar",
+				"description": "This is the return variable for the isnull result."
+			},
+			{
+				"name": "test var",
+				"description": "This is the cvar you want to check"
+			}
+		]
+	},
+	"isnumerical": {
+		"command": "isnumerical",
+		"syntax": "isnumerical <variable> <string>",
+		"description": "Stores in the variable whether the string is numerical or not",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "output variable"
+			},
+			{
+				"name": "string",
+				"description": "string to test"
+			}
+		]
+	},
+	"keyfilter": {
+		"command": "keyfilter",
+		"syntax": "keyfilter <keygroup> <key> <not/only> <partial-keyvalue-name> [value]",
+		"description": "This command goes through the specified key and filters out any key-values matching your description. It's handy for es_foreachval, if you don't want it to be part of the loop.",
+		"parameters": [
+			{
+				"name": "keygroup",
+				"description": "Keygroup that the key to filter is in"
+			},
+			{
+				"name": "key",
+				"description": "Key to filter"
+			},
+			{
+				"name": "not/only",
+				"description": "Will filter out any values NOT matching the inputs, or ONLY the inputs. (Doesn't apply to the [value] argument)"
+			},
+			{
+				"name": "partial-keyvalue-name",
+				"description": "Any values containing the partial input will be either kept or filtered depending on the <not/only> input"
+			},
+			{
+				"name": "value",
+				"description": "All value-names matching <partial-keyvalue-name> will need to have this value to be kept or deleted (Optional)"
+			}
+		]
+	},
+	"keygrouprand": {
+		"command": "keygrouprand",
+		"syntax": "keygrouprand <keygroupname> [#key/#keyvalue/#all] [keylimit]",
+		"description": "Randomizes a keygroup with the name <keygroupname> by changing the order of keys, keyvalues or both.",
+		"parameters": [
+			{
+				"name": "keygroupname",
+				"description": "the name of the keygroup you want to randomize"
+			},
+			{
+				"name": "#key/#keyvalue/#all",
+				"description": "(optional) randomize #key, #keyvalue or #all (default)"
+			},
+			{
+				"name": "keylimit",
+				"description": "(optional) the maximum limit of returned key's"
+			}
+		]
+	},
+	"keygroupremove": {
+		"command": "keygroupremove",
+		"syntax": "keygroupremove <keygroupname>",
+		"description": "Deletes a keygroup with the name <keygroupname> and does check for existence of the keygroup before. Useful for keygroup delete on a map change, to avoid error on first delete.",
+		"parameters": [
+			{
+				"name": "keygroupname",
+				"description": "the name of the keygroup you want to delete"
+			}
+		]
+	},
+	"keygroupsort": {
+		"command": "keygroupsort",
+		"syntax": "keygroupsort <keygroupname> <field to sort> [<des/asc #numeric/#alpha>]",
+		"description": "Sorts a keygroup with the name <keygroupname> using the keyvalname <field to sort>.",
+		"parameters": [
+			{
+				"name": "keygroupname",
+				"description": "the name of the keygroup you want to sort"
+			},
+			{
+				"name": "field to sort",
+				"description": "the keyval name to sort the keygroup on. To sort on the key just use the keygroup name as the ."
+			},
+			{
+				"name": "des/asc",
+				"description": "whether to sort the keygroup in descending or ascending order"
+			},
+			{
+				"name": "#numeric/#alpha",
+				"description": "whether to expect numeric or text data"
+			}
+		]
+	},
+	"keymath": {
+		"command": "keymath",
+		"syntax": "keymath [keygroup] <key> <keyvalue> <operator> [value]",
+		"description": "Allows the scripter to apply direct math to key values instead of using multiple commands to perform one function.",
+		"parameters": [
+			{
+				"name": "keygroup",
+				"description": "The  where the keymath will be performed."
+			},
+			{
+				"name": "key",
+				"description": "The  where the math will be performed."
+			},
+			{
+				"name": "keyvalue",
+				"description": "The  upon which the math will be performed."
+			},
+			{
+				"name": "operator",
+				"description": "Can be any of the following"
+			},
+			{
+				"name": "value",
+				"description": "Used with some math operations as called out above"
+			}
+		]
+	},
+	"keymenu": {
+		"command": "keymenu",
+		"syntax": "keymenu <command> <parameters>",
+		"description": "Creates a dynamic AMX-Style menu using a keygroup.",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "tells what to do to your popup"
+			},
+			{
+				"name": "parameters",
+				"description": "command specific "
+			}
+		]
+	},
+	"linkedlist": {
+		"command": "linkedlist",
+		"syntax": "linkedlist <command> <parameters>",
+		"description": "Creates and handles a linked list data structure",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "tells what to do with the list"
+			},
+			{
+				"name": "parameters",
+				"description": "command specific "
+			}
+		]
+	},
+	"nearcoord": {
+		"command": "nearcoord",
+		"syntax": "nearcoord <var> <identifier> <x coord> <y coord> <z coord> <x range> <y range> <z range> <\"command to run\">",
+		"description": "Loops through players within range of a set of co-ordinates, puts their userid into var and executes command to run.",
+		"parameters": [
+			{
+				"name": "var",
+				"description": "The iable that will hold the userid of the player."
+			},
+			{
+				"name": "identifier",
+				"description": "The  that holds the players you want to check. This can be any foreach player ."
+			},
+			{
+				"name": "x coord",
+				"description": " and x rangeThe player must be within x range of  on the x axis for the test to pass."
+			},
+			{
+				"name": "y coord",
+				"description": " and y rangeThe player must be within y range of  on the y axis for the test to pass."
+			},
+			{
+				"name": "z coord",
+				"description": " and z rangeThe player must be within z range of  on the z axis for the test to pass."
+			},
+			{
+				"name": "command to run",
+				"description": "This command is run for each player within range of the coordinates."
+			}
+		]
+	},
+	"playerget": {
+		"command": "playerget",
+		"syntax": "playerget <command> [various parameters]",
+		"description": "Gets player information depending on the command",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "Command you want to performone of the following"
+			},
+			{
+				"name": "playergetset",
+				"description": "Commands below were added after the first beta release of ES 1.5. See the Library section of the forum for updates of ."
+			}
+		]
+	},
+	"playerset": {
+		"command": "playerset",
+		"syntax": "playerset <command> <userid> [various parameters]",
+		"description": "",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "Command you want to performone of the following"
+			},
+			{
+				"name": "playergetset",
+				"description": "Commands below were added after the release of ES 1.5. See the Library section of the forum for updates to ."
+			}
+		]
+	},
+	"playervar": {
+		"command": "playervar",
+		"syntax": "playervar <get/set/exists> [var] <userid> [varname] [value]",
+		"description": "This command can be used in replacement of temporary keygroups. Instead of having to create a key for a player on connect, and deleting on disconnect you can use this command to get or set player-specific variables. Think of this as a command like es_setinfo, only it takes userids.",
+		"parameters": [
+			{
+				"name": "get/set/exists",
+				"description": "The set sub-command tells the command to set a value to a player. The get tells the command to get a value already set to a player The exists sub-command stores into variable whether the playervar exists or not"
+			},
+			{
+				"name": "var",
+				"description": "This parameter is only used when you're getting a variable or checking if a variable exists. What you put for it will be the name of the variable that the value is set to."
+			},
+			{
+				"name": "userid",
+				"description": "The userid of the player you are setting or getting a value."
+			},
+			{
+				"name": "varname",
+				"description": "The name of the var that is specific to the player. Like in es_setinfo <variable> <value> the [variable] is what this is, only player-specific."
+			},
+			{
+				"name": "value",
+				"description": "This is only used when you're setting a value to a player. In es_setinfo [variable] <value> this is the <value>"
+			}
+		]
+	},
+	"popup": {
+		"command": "popup",
+		"syntax": "popup <command> <popup id> <parameters>",
+		"description": "This command makes it easier to create, display, edit and handle various kinds of popups displayed to players.",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "tells what to do to your popup"
+			},
+			{
+				"name": "popup id",
+				"description": "unique name for the popup to be modified"
+			},
+			{
+				"name": "parameters",
+				"description": "command specific "
+			}
+		]
+	},
+	"profile": {
+		"command": "profile",
+		"syntax": "profile <operation> <storage-variable>",
+		"description": "Controls a high-resolution timer for profile usage, outputs timing to console.",
+		"parameters": [
+			{
+				"name": "operation",
+				"description": "To start a profile stopwatch:"
+			},
+			{
+				"name": "storage-variable",
+				"description": "A variable to store the start/stop and difference times."
+			}
+		]
+	},
+	"profilecmd": {
+		"command": "profilecmd",
+		"syntax": "profilecmd <variable> <cmd>",
+		"description": "Runs a command and returns the relative performance value.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "This is the name for the  you want to save the result in."
+			},
+			{
+				"name": "cmd",
+				"description": "This is the command you to want to run the profile check on."
+			}
+		]
+	},
+	"pycmd_register": {
+		"command": "pycmd_register",
+		"syntax": "pycmd_register <SECRET-WORD>",
+		"description": "Registers a special command that allows you to run Python commands via rcon or server console.",
+		"parameters": [
+			{
+				"name": "SECRET-WORD",
+				"description": "This secret word will become the name of the console command that will be created."
+			}
+		]
+	},
+	"queue": {
+		"command": "queue",
+		"syntax": "queue <command> <parameters>",
+		"description": "Provides a queue (First in, first out) data structure",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "see Commands"
+			},
+			{
+				"name": "parameters",
+				"description": "command specific "
+			}
+		]
+	},
+	"refcount": {
+		"command": "refcount",
+		"syntax": "refcount <command>",
+		"description": "Increase, decrease or get the reference count for a variable.",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "To increase the reference count:"
+			}
+		]
+	},
+	"repeat": {
+		"command": "repeat",
+		"syntax": "repeat <operation>",
+		"description": "Similar to es_delayed but it can be paused/resumed and it repeats your command a set amount of times at a rate in which you set (Interval). If nothing is put for the number of times to execute it will continue to loop until map change",
+		"parameters": [
+			{
+				"name": "operation:",
+				"description": "To add a loopable command to memory"
+			}
+		]
+	},
+	"schedule": {
+		"command": "schedule",
+		"syntax": "schedule <subcommand> <parameters>",
+		"description": "Schedules a command to be run on an event the specified number of times",
+		"parameters": [
+			{
+				"name": "schedule create <name> <command>",
+				"description": ""
+			},
+			{
+				"name": "schedule set <event> <name> [instances]",
+				"description": ""
+			},
+			{
+				"name": "schedule status <variable> <name/event>",
+				"description": ""
+			},
+			{
+				"name": "schedule del <event> <name>",
+				"description": ""
+			},
+			{
+				"name": "schedule delevent <event>",
+				"description": ""
+			},
+			{
+				"name": "schedule delcmd <name>",
+				"description": ""
+			}
+		]
+	},
+	"score": {
+		"command": "score",
+		"syntax": "score <command> <variable/target> <target/parameter>",
+		"description": "Manipulates a player's or a team's score.",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "What to do to/with the score."
+			},
+			{
+				"name": "variable",
+				"description": "Variable to return the target's score with (Only used with get)"
+			},
+			{
+				"name": "target",
+				"description": "Who to use this command on (supports specific userids or even teamscores using #t or #ct)"
+			},
+			{
+				"name": "parameter",
+				"description": "Number to manipulate the player's score with (Only used with set, add, or del)"
+			}
+		]
+	},
+	"setting": {
+		"command": "setting",
+		"syntax": "setting <command> [settingname] <parameters>",
+		"description": "Allows you to save global or player based settings and display them in a menu.",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "tells what to do to your setting"
+			},
+			{
+				"name": "settingname",
+				"description": "unique name for the setting to be modified"
+			},
+			{
+				"name": "parameters",
+				"description": "command specific "
+			}
+		]
+	},
+	"sqlx": {
+		"command": "sqlx",
+		"syntax": "sqlx <command> <parameters>",
+		"description": "Keygroup clone done in SQLite. This is not real SQLite! And slower than using SQLite directly.",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "tells what to do"
+			},
+			{
+				"name": "parameters",
+				"description": "command specific "
+			}
+		]
+	},
+	"stack": {
+		"command": "stack",
+		"syntax": "stack <subcommand> <parameters>",
+		"description": "Provides a stack (Last in, first out) data structure for storing values.",
+		"parameters": [
+			{
+				"name": "subcommand",
+				"description": "see Commands"
+			},
+			{
+				"name": "parameters",
+				"description": "command specific "
+			}
+		]
+	},
+	"statlog": {
+		"command": "statlog",
+		"syntax": "statlog <identifier> <event>",
+		"description": "Trigger an event that can be parsed by stat programs such as HLstatsX.",
+		"parameters": [
+			{
+				"name": "identifier",
+				"description": "the  of who will trigger the event"
+			},
+			{
+				"name": "event",
+				"description": "the  that should be triggered"
+			}
+		]
+	},
+	"texthandler": {
+		"command": "texthandler",
+		"syntax": "texthandler <command>",
+		"description": "Handles custom string resources and colour management.",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "To create a new string resource:"
+			}
+		]
+	},
+	"uniqueid": {
+		"command": "uniqueid",
+		"syntax": "uniqueid <variable> <userid> [botname]",
+		"description": "Generates an unique id for each player or bot on Internet and LAN servers.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "Variable which will store the player's steamid"
+			},
+			{
+				"name": "userid",
+				"description": "User id of the player"
+			},
+			{
+				"name": "botname",
+				"description": "if equal to 1 it forces the bot name into the id"
+			}
+		]
+	},
+	"usermsg": {
+		"command": "usermsg",
+		"syntax": "usermsg <subcommand> <parameters>",
+		"description": "This command is simply a shortcut of es_usermsg to make it a lot easier and cleaner to do. This library will probably expand as new es_usermsg tricks become uncovered",
+		"parameters": [
+			{
+				"name": "subcommand",
+				"description": "Tells usermsg what you want to do."
+			},
+			{
+				"name": "parameters",
+				"description": "To see parameters, see below listing or type 'usermsg list' in console"
+			}
+		]
+	},
+	"uxp": {
+		"command": "uxp",
+		"syntax": "uxp <servercommand>",
+		"description": "Functions exactly as exp, with the option of adding functions with uxp_reg:",
+		"parameters": [
+			{
+				"name": "exp",
+				"description": "Please see functions can also be added with uxp_reg."
+			}
+		]
+	},
+	"uxp_reg": {
+		"command": "uxp_reg",
+		"syntax": "uxp_reg <subcommand> <parameters>",
+		"description": "Allows the user to add functions to uxp",
+		"parameters": [
+			{
+				"name": "uxp_reg create <function> <commandstring>",
+				"description": ""
+			},
+			{
+				"name": "uxp_reg delete <function>",
+				"description": ""
+			},
+			{
+				"name": "uxp_reg status <variable> <function>",
+				"description": ""
+			}
+		]
+	},
+	"vecmath": {
+		"command": "vecmath",
+		"syntax": "vecmath <result> <vector1> <operator> <vector2>",
+		"description": "Performs mathematical operations with vectors.",
+		"parameters": [
+			{
+				"name": "result",
+				"description": "variable(s) to which the ing vector will be saved"
+			},
+			{
+				"name": "vector1",
+				"description": "the vector to be operated"
+			},
+			{
+				"name": "operator",
+				"description": "the mathematical operation to be done"
+			},
+			{
+				"name": "vector2",
+				"description": "the second argument to operator (not applicable to all ops)"
+			}
+		]
+	},
+	"vote": {
+		"command": "vote",
+		"syntax": "vote <command> [votename] <parameters>",
+		"description": "Creates and handles user votes and runs a block at the end of the vote.",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "tells what to do to your vote"
+			},
+			{
+				"name": "votename",
+				"description": "unique name for the vote to be modified"
+			},
+			{
+				"name": "parameters",
+				"description": "command specific "
+			}
+		]
+	},
+	"while": {
+		"command": "while",
+		"syntax": "while \"<condition>\" \"<command>\"",
+		"description": "Will execute command until the condition is not true.",
+		"parameters": [
+			{
+				"name": "condition",
+				"description": "Condition to check each time. Can compare values using:"
+			},
+			{
+				"name": "command",
+				"description": "Command to execute. Can be a single  or use es_doblock to do several s."
+			}
+		]
+	},
+	"xalias": {
+		"command": "xalias",
+		"syntax": "xalias <command> <name> <parameter>",
+		"description": "Creates a custom alias to execute many commands.",
+		"parameters": [
+			{
+				"name": "command",
+				"description": "What to do with the xalias"
+			},
+			{
+				"name": "name",
+				"description": "The  of the xalias"
+			},
+			{
+				"name": "parameter",
+				"description": "Only used with addcommand/delcommand: Command to add or delete"
+			}
+		]
+	}
+}

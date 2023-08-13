@@ -4,7 +4,7 @@
 	"name": "EventScripts",
 	"patterns": [
 		{
-			"match": "\\b(es_[a-zA-Z0-9_]+|est_[a-zA-Z0-9_]+)\\b",
+			"match": "\\b(es_[a-zA-Z0-9_]+|est_[a-zA-Z0-9_]+|average|cheatexec|clientcmd|crontab|damage|downloadable|else|es|escinject|esnq|event\\sinitialize|eventscripts_addondir|eventscripts_gamedir|eventscripts_protectrcon|eventscripts_register|eventscripts_subdirectory|eventscripts_unregister|eventscripts_ver|exp|forcecase|foreach|foreach\\spart|foreach\\splayer|foreach\\stoken|foreach\\sweapon|getbotname|getplayercount|getplayerinfo|getrandplayer|if|ifx|inrange|isnull|isnumerical|keyfilter|keygrouprand|keygroupremove|keygroupsort|keymath|keymenu|linkedlist|nearcoord|playerget|playerset|playervar|popup|profile|profilecmd|pycmd_register|queue|refcount|repeat|schedule|score|setting|sqlx|stack|statlog|texthandler|uniqueid|usermsg|uxp|uxp_reg|vecmath|vote|while|xalias|do)\\b",
 			"name": "keyword.command.eventscripts"
 		}
 	]
