@@ -1,0 +1,11 @@
+{
+	"scopeName": "source.eventscripts",
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "EventScripts",
+	"patterns": [
+		{
+			"match": "\\b(es_[a-zA-Z0-9_]+|est_[a-zA-Z0-9_]+)\\b",
+			"name": "keyword.command.eventscripts"
+		}
+	]
+}

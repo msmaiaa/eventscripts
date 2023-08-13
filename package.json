@@ -1,0 +1,38 @@
+{
+	"name": "eventscripts",
+	"displayName": "eventscripts",
+	"description": "eventscripts language support",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.81.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"main": "extension.js",
+	"activationEvents": [
+		"onLanguage:eventscripts"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "eventscripts",
+				"scopeName": "source.eventscripts",
+				"aliases": [
+					"eventscripts"
+				],
+				"extensions": [
+					".txt"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "eventscripts",
+				"scopeName": "source.eventscripts",
+				"path": "./syntaxes/eventscripts.tmLanguage.json"
+			}
+		]
+	}
+}
