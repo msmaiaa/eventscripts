@@ -11,10 +11,14 @@ function activate(context) {
 	let genCommandMd = (command) => {
 		let wordMd = new vscode.MarkdownString();
 		wordMd.appendMarkdown(`<h2>${command.command}</h2>`);
-		wordMd.appendMarkdown(`<p>Syntax: <code>${escapeToMd(command.syntax)}</code></p>`);
-		wordMd.appendMarkdown("<hr>")
-		wordMd.appendMarkdown(`<h3>Description</h3>`)
-		wordMd.appendMarkdown(`<pp>${escapeToMd(command.description)}</p>`)
+		wordMd.appendMarkdown(`<p>Syntax: <code>${command.syntax ? escapeToMd(command.syntax) : command.command}</code></p>`);
+
+		if (command.description) {
+			wordMd.appendMarkdown("<hr>")
+			wordMd.appendMarkdown(`<h3>Description</h3>`)
+			wordMd.appendMarkdown(`<pp>${escapeToMd(command.description)}</p>`)
+		}
+
 		if (command.parameters.length > 0) {
 			wordMd.appendMarkdown("<hr>")
 			wordMd.appendMarkdown(`<h3>Parameters</h3>`)

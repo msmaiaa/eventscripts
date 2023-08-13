@@ -3437,5 +3437,1616 @@
 				"description": "Only used with addcommand/delcommand: Command to add or delete"
 			}
 		]
+	},
+	"est_AddDownload": {
+		"command": "est_AddDownload",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"est_AllowAdvancedDrop": {
+		"command": "est_AllowAdvancedDrop",
+		"syntax": "est_AllowAdvancedDrop <1/0>",
+		"description": "",
+		"parameters": []
+	},
+	"est_Armor": {
+		"command": "est_Armor",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"est_ArmorAdd": {
+		"command": "est_ArmorAdd",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"est_BlackHole": {
+		"command": "est_BlackHole",
+		"syntax": "est_BlackHole <x> <y> <z> <time>",
+		"description": "",
+		"parameters": []
+	},
+	"est_BuildMenu": {
+		"command": "est_BuildMenu",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"est_Burn": {
+		"command": "est_Burn",
+		"syntax": "est_Burn <players> <time>",
+		"description": "",
+		"parameters": []
+	},
+	"est_CExec": {
+		"command": "est_CExec",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"est_Cash": {
+		"command": "est_Cash",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"est_CashAdd": {
+		"command": "est_CashAdd",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"est_DeathAdd": {
+		"command": "est_DeathAdd",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"est_DeathSet": {
+		"command": "est_DeathSet",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"est_DeleteRagdolls": {
+		"command": "est_DeleteRagdolls",
+		"syntax": "est_DeleteRagdolls [identifier]",
+		"description": "",
+		"parameters": []
+	},
+	"est_DropWeapon": {
+		"command": "est_DropWeapon",
+		"syntax": "est_DropWeapon <identifier> <weapon / slot>",
+		"description": "",
+		"parameters": []
+	},
+	"est_Drug": {
+		"command": "est_Drug",
+		"syntax": "est_Drug <identifier> [time]",
+		"description": "",
+		"parameters": []
+	},
+	"est_Drunk": {
+		"command": "est_Drunk",
+		"syntax": "est_Drunk <identifier> [time]",
+		"description": "",
+		"parameters": []
+	},
+	"est_Fade": {
+		"command": "est_Fade",
+		"syntax": "est_Fade <identifier> <type> <fade time> <total time> <Red> <Green> <Blue> <Alpha>",
+		"description": "",
+		"parameters": []
+	},
+	"est_FileExists": {
+		"command": "est_FileExists",
+		"syntax": "est_FileExists <return> <\"file\">",
+		"description": "",
+		"parameters": []
+	},
+	"est_Freeze": {
+		"command": "est_Freeze",
+		"syntax": "est_Freeze <identifier> <1/0>",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetAmmo": {
+		"command": "est_GetAmmo",
+		"syntax": "est_GetAmmo <variable> <indentifier> <weapon slot/name>",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetAngleToPoint": {
+		"command": "est_GetAngleToPoint",
+		"syntax": "est_GetAngleToPoint <identifier> <x> <y> <z> <return pitch> <return yaw> <return roll>",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetArmor": {
+		"command": "est_GetArmor",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetChat": {
+		"command": "est_GetChat",
+		"syntax": "est_GetChat <variable> <userid>",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetDeaths": {
+		"command": "est_GetDeaths",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetEscort": {
+		"command": "est_GetEscort",
+		"syntax": "est_GetEscort <variable> <identifier>",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetEventInfo": {
+		"command": "est_GetEventInfo",
+		"syntax": "<variable> <event_var>",
+		"description": "Gets the <event> event_var's before it's fired, in the pre-event.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "The  to which to save the <event_var>"
+			},
+			{
+				"name": "event_var",
+				"description": "The event variable that will be saved to <variable> from your event."
+			}
+		]
+	},
+	"est_GetEyeCoord": {
+		"command": "est_GetEyeCoord",
+		"syntax": "est_GetEyeCoord <players> <variablex> <variabley> <variablez>",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetFB": {
+		"command": "est_GetFB",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetGravity": {
+		"command": "est_GetGravity",
+		"syntax": "est_GetGravity <variable> <userid>",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetGun": {
+		"command": "est_GetGun",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetHE": {
+		"command": "est_GetHE",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetHealth": {
+		"command": "est_GetHealth",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetIP": {
+		"command": "est_GetIP",
+		"syntax": "est_GetIP <variable> <identifier>",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetIndex": {
+		"command": "est_GetIndex",
+		"syntax": "est_GetIndex <variable> <identifier>",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetKills": {
+		"command": "est_GetKills",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetName": {
+		"command": "est_GetName",
+		"syntax": "est_GetName <variable> <identifier>",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetPrimary": {
+		"command": "est_GetPrimary",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetSG": {
+		"command": "est_GetSG",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetSecondary": {
+		"command": "est_GetSecondary",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetSteam": {
+		"command": "est_GetSteam",
+		"syntax": "est_GetSteam <variable> <identifier>",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetTeam": {
+		"command": "est_GetTeam",
+		"syntax": "est_GetTeam <variable> <identifier>",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetUserID": {
+		"command": "est_GetUserID",
+		"syntax": "est_GetUserID <variable> <identifier>",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetViewAngle": {
+		"command": "est_GetViewAngle",
+		"syntax": "est_GetViewAngle <identifier> <return pitch> <return yaw> <return roll>",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetViewCoord": {
+		"command": "est_GetViewCoord",
+		"syntax": "est_GetViewCoord <identifier> <return x> <return y> <return z>",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetViewPlayer": {
+		"command": "est_GetViewPlayer",
+		"syntax": "est_GetViewPlayer <identifier> <return userid>",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetViewProp": {
+		"command": "est_GetViewProp",
+		"syntax": "est_GetViewProp <identifier> <return index>",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetWallBetween": {
+		"command": "est_GetWallBetween",
+		"syntax": "est_GetWallBetween <variable> <start-x> <start-y> <start-z> <end-x> <end-y> <end-z>",
+		"description": "",
+		"parameters": []
+	},
+	"est_GetWeaponIndex": {
+		"command": "est_GetWeaponIndex",
+		"syntax": "est_GetWeaponIndex <variable> <indentifier> <weapon slot/name>",
+		"description": "",
+		"parameters": []
+	},
+	"est_God": {
+		"command": "est_God",
+		"syntax": "est_God <identifier>",
+		"description": "",
+		"parameters": []
+	},
+	"est_HasDefuser": {
+		"command": "est_HasDefuser",
+		"syntax": "est_HasDefuser <variable> <identifier>",
+		"description": "",
+		"parameters": []
+	},
+	"est_HasHelmet": {
+		"command": "est_HasHelmet",
+		"syntax": "est_HasHelmet <variable> <identifier>",
+		"description": "",
+		"parameters": []
+	},
+	"est_HasKevlar": {
+		"command": "est_HasKevlar",
+		"syntax": "est_HasKevlar <variable> <identifier>",
+		"description": "",
+		"parameters": []
+	},
+	"est_Health": {
+		"command": "est_Health",
+		"syntax": "est_Health <players> <operator> <number>",
+		"description": "Adds players health.",
+		"parameters": [
+			{
+				"name": "players",
+				"description": "See Est_PlayerSelection for player selection help."
+			},
+			{
+				"name": "operator",
+				"description": "Can be any of the following"
+			},
+			{
+				"name": "number",
+				"description": "The  so will be add or subtracted"
+			}
+		]
+	},
+	"est_HealthAdd": {
+		"command": "est_HealthAdd",
+		"syntax": "est_HealthAdd <players> <value>",
+		"description": "Adds players health.",
+		"parameters": [
+			{
+				"name": "players",
+				"description": "See Est_PlayerSelection for player selection help."
+			},
+			{
+				"name": "value",
+				"description": "health so will be added."
+			}
+		]
+	},
+	"est_IsAdmin": {
+		"command": "est_IsAdmin",
+		"syntax": "est_IsAdmin [VAR] [PLAYER]",
+		"description": "",
+		"parameters": [
+			{
+				"name": "VAR",
+				"description": "Variable to store 1 or 0"
+			}
+		]
+	},
+	"est_IsAlive": {
+		"command": "est_IsAlive",
+		"syntax": "est_IsAlive <variable> <identifier>",
+		"description": "",
+		"parameters": []
+	},
+	"est_IsAlpha": {
+		"command": "est_IsAlpha",
+		"syntax": "est_IsAlpha <variable> <string>",
+		"description": "",
+		"parameters": []
+	},
+	"est_IsBomber": {
+		"command": "est_IsBomber",
+		"syntax": "est_IsBomber <variable> <identifier>",
+		"description": "",
+		"parameters": []
+	},
+	"est_IsNumeric": {
+		"command": "est_IsNumeric",
+		"syntax": "est_IsNumeric <variable> <string>",
+		"description": "",
+		"parameters": []
+	},
+	"est_IsOnly": {
+		"command": "est_IsOnly",
+		"syntax": "est_IsOnly <variable> <test string> <test for>",
+		"description": "",
+		"parameters": []
+	},
+	"est_JetPack": {
+		"command": "est_JetPack",
+		"syntax": "est_JetPack <identifier> <1/0>",
+		"description": "",
+		"parameters": []
+	},
+	"est_KillAdd": {
+		"command": "est_KillAdd",
+		"syntax": "est_KillAdd <identifier> <value>",
+		"description": "",
+		"parameters": []
+	},
+	"est_KillSet": {
+		"command": "est_KillSet",
+		"syntax": "est_KillSet <identifier> <value>",
+		"description": "",
+		"parameters": []
+	},
+	"est_KnifeOnly": {
+		"command": "est_KnifeOnly",
+		"syntax": "est_KnifeOnly <variable> <identifier>",
+		"description": "",
+		"parameters": []
+	},
+	"est_MakeAdmin": {
+		"command": "est_MakeAdmin",
+		"syntax": "est_Armor <STEAM:ID>",
+		"description": "",
+		"parameters": []
+	},
+	"est_MotD_F": {
+		"command": "est_MotD_F",
+		"syntax": "est_MotD_F <identifier> <Title> <command> <File>",
+		"description": "",
+		"parameters": []
+	},
+	"est_MotD_T": {
+		"command": "est_MotD_T",
+		"syntax": "est_MotD_T <identifier> <Title> <command> <Message>",
+		"description": "",
+		"parameters": []
+	},
+	"est_MotD_W": {
+		"command": "est_MotD_W",
+		"syntax": "est_MotD_W <identifier> <Title> <command> <URL>",
+		"description": "",
+		"parameters": []
+	},
+	"est_Name": {
+		"command": "est_Name",
+		"syntax": "est_Name <identifier> <name>",
+		"description": "",
+		"parameters": []
+	},
+	"est_Near": {
+		"command": "est_Near",
+		"syntax": "est_near <variable> <filter> <distance> <userid> <command>",
+		"description": "Runs a command on every player within the game unit distance with in the userid that also passes as part of the filter. You can also use it with an es before it.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "a  where you wish to store the token"
+			},
+			{
+				"name": "filter",
+				"description": "See Est_PlayerSelection for player selection help"
+			},
+			{
+				"name": "distance",
+				"description": "the number of game units a player that meets the filter must be near the userid to have the command run on them (240 is about 20 feet)"
+			},
+			{
+				"name": "userid",
+				"description": "the person you are using as the base point for the distance for your command"
+			},
+			{
+				"name": "command",
+				"description": "the  to be run on each player close enough to your targeted userid"
+			}
+		]
+	},
+	"est_NoClip": {
+		"command": "est_NoClip",
+		"syntax": "est_noclip <identifier> <1/0>",
+		"description": "",
+		"parameters": []
+	},
+	"est_PhysPush": {
+		"command": "est_PhysPush",
+		"syntax": "est_PhysPush <identifier> <x force> <y force> <z force>",
+		"description": "",
+		"parameters": []
+	},
+	"est_PlayPlayer": {
+		"command": "est_PlayPlayer",
+		"syntax": "est_PlayPlayer <identifier> <sound> [volume] [playtoplayers]",
+		"description": "",
+		"parameters": []
+	},
+	"est_PushTo": {
+		"command": "est_PushTo",
+		"syntax": "est_PushTo <identifier> <x> <y> <z> <force>",
+		"description": "",
+		"parameters": []
+	},
+	"est_RegEventBlock": {
+		"command": "est_RegEventBlock",
+		"syntax": "<event> <command to execute>",
+		"description": "Registers a pre-event with es_tools that will fire before the asigned event.",
+		"parameters": [
+			{
+				"name": "event",
+				"description": "The  that es_tools will watch for then fire the pre-."
+			},
+			{
+				"name": "command to execute",
+				"description": "The  before the <event> is fired."
+			}
+		]
+	},
+	"est_RegSayHook": {
+		"command": "est_RegSayHook",
+		"syntax": "est_RegSayHook <hook text> <find partials>",
+		"description": "",
+		"parameters": []
+	},
+	"est_Remove": {
+		"command": "est_Remove",
+		"syntax": "est_Remove <identifier>",
+		"description": "",
+		"parameters": []
+	},
+	"est_RemoveIdle": {
+		"command": "est_RemoveIdle",
+		"syntax": "est_RemoveIdle <class name>",
+		"description": "",
+		"parameters": []
+	},
+	"est_RemoveWeapon": {
+		"command": "est_RemoveWeapon",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"est_Rescued": {
+		"command": "est_Rescued",
+		"syntax": "est_Rescued <variable>",
+		"description": "",
+		"parameters": []
+	},
+	"est_Restrict": {
+		"command": "est_Restrict",
+		"syntax": "est_Restrict <identifier> <weapon name>",
+		"description": "",
+		"parameters": []
+	},
+	"est_RestrictAll": {
+		"command": "est_RestrictAll",
+		"syntax": "est_RestrictAll <identifier>",
+		"description": "",
+		"parameters": []
+	},
+	"est_Rocket": {
+		"command": "est_Rocket",
+		"syntax": "est_Rocket <identifier>",
+		"description": "",
+		"parameters": []
+	},
+	"est_RoundDecimal": {
+		"command": "est_RoundDecimal",
+		"syntax": "est_RoundDecimal <variable> <decimal> <places>",
+		"description": "",
+		"parameters": []
+	},
+	"est_SetAmmo": {
+		"command": "est_SetAmmo",
+		"syntax": "est_SetAmmo <identifier> <weapon slot/name> <amount>",
+		"description": "",
+		"parameters": []
+	},
+	"est_SetArmor": {
+		"command": "est_SetArmor",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"est_SetCash": {
+		"command": "est_SetCash",
+		"syntax": "est_SetCash <identifier> <value>",
+		"description": "",
+		"parameters": []
+	},
+	"est_SetEntityColor": {
+		"command": "est_SetEntityColor",
+		"syntax": "est_SetEntityColor <Entity Index> <red> <green> <blue> <alpha>",
+		"description": "",
+		"parameters": []
+	},
+	"est_SetEventInfo": {
+		"command": "est_SetEventInfo",
+		"syntax": "<variable> <event_var>",
+		"description": "Gets the <event> event_var's before it's fired, in the pre-event.",
+		"parameters": [
+			{
+				"name": "variable",
+				"description": "The  to which to save the <event_var>"
+			},
+			{
+				"name": "event_var",
+				"description": "The event variable that will be saved to <variable> from your event."
+			}
+		]
+	},
+	"est_SetGravity": {
+		"command": "est_SetGravity",
+		"syntax": "est_SetGravity <identifier> <gravity ratio>",
+		"description": "",
+		"parameters": []
+	},
+	"est_SetHealth": {
+		"command": "est_SetHealth",
+		"syntax": "est_SetHealth <players> <value>",
+		"description": "Sets players health.",
+		"parameters": [
+			{
+				"name": "players",
+				"description": "See Est_PlayerSelection for player selection help."
+			},
+			{
+				"name": "value",
+				"description": "health so will be set."
+			}
+		]
+	},
+	"est_SetModel": {
+		"command": "est_SetModel",
+		"syntax": "est_SetModel <identifier> <model>",
+		"description": "",
+		"parameters": []
+	},
+	"est_SetPlayerColor": {
+		"command": "est_SetPlayerColor",
+		"syntax": "est_SetPlayerColor <identifier> <red> <green> <blue> <alpha> [color weapons]",
+		"description": "",
+		"parameters": []
+	},
+	"est_SetViewAngle": {
+		"command": "est_SetViewAngle",
+		"syntax": "est_SetViewAngle <identifier> <pitch> <yaw> <roll>",
+		"description": "",
+		"parameters": []
+	},
+	"est_Shake": {
+		"command": "est_Shake",
+		"syntax": "est_Shake <identifier> <time> <distance> <violence>",
+		"description": "",
+		"parameters": []
+	},
+	"est_ShowMenu": {
+		"command": "est_ShowMenu",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"est_Spawn": {
+		"command": "est_Spawn",
+		"syntax": "est_Spawn <identifier> [variable]",
+		"description": "",
+		"parameters": []
+	},
+	"est_Speed": {
+		"command": "est_Speed",
+		"syntax": "est_Speed <identifier> <multiplier>",
+		"description": "",
+		"parameters": []
+	},
+	"est_StrLen": {
+		"command": "est_StrLen",
+		"syntax": "est_StrLen <variable> <string>",
+		"description": "",
+		"parameters": []
+	},
+	"est_StrToUpper": {
+		"command": "est_StrToUpper",
+		"syntax": "est_StrToUPPER <variable> <string>",
+		"description": "",
+		"parameters": []
+	},
+	"est_StrToLower": {
+		"command": "est_StrToLower",
+		"syntax": "est_StrTolower <variable> <string>",
+		"description": "",
+		"parameters": []
+	},
+	"est_StripPlayer": {
+		"command": "est_StripPlayer",
+		"syntax": "est_StripPlayer <identifier> <1/0>",
+		"description": "",
+		"parameters": []
+	},
+	"est_Team": {
+		"command": "est_Team",
+		"syntax": "est_Team <identifier> <team number> [slay]",
+		"description": "",
+		"parameters": []
+	},
+	"est_TrimDecimal": {
+		"command": "est_TrimDecimal",
+		"syntax": "est_TrimDecimal <variable> <decimal> <places>",
+		"description": "",
+		"parameters": []
+	},
+	"est_UnRegEventBlock": {
+		"command": "est_UnRegEventBlock",
+		"syntax": "<event> <command to unregister>",
+		"description": "Unregister a pre-event set by Est_RegEventBlock.",
+		"parameters": [
+			{
+				"name": "event",
+				"description": "The  that is registered for a pre-."
+			},
+			{
+				"name": "command to unregister",
+				"description": "The command that was registered with Est_RegEventBlock that you want to unregister."
+			}
+		]
+	},
+	"est_UnRestrict": {
+		"command": "est_UnRestrict",
+		"syntax": "est_UnRestrict <identifier> <weapon name>",
+		"description": "",
+		"parameters": []
+	},
+	"est_UnRestrictAll": {
+		"command": "est_UnRestrictAll",
+		"syntax": "est_UnRestrictAll <identifier>",
+		"description": "",
+		"parameters": []
+	},
+	"est_UpTime": {
+		"command": "est_UpTime",
+		"syntax": "est_UpTime <variable>",
+		"description": "",
+		"parameters": []
+	},
+	"es_xbotsetvalue": {
+		"command": "es_xbotsetvalue",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xcentermsg": {
+		"command": "es_xcentermsg",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xcentertell": {
+		"command": "es_xcentertell",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xcexec": {
+		"command": "es_xcexec",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xcexec_all": {
+		"command": "es_xcexec_all",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xchangeteam": {
+		"command": "es_xchangeteam",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xcommandv": {
+		"command": "es_xcommandv",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xcopy": {
+		"command": "es_xcopy",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xcreatebot": {
+		"command": "es_xcreatebot",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xcreateentitylist": {
+		"command": "es_xcreateentitylist",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xcreateplayerlist": {
+		"command": "es_xcreateplayerlist",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xcreatescriptlist": {
+		"command": "es_xcreatescriptlist",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xcreatevectorfrompoints": {
+		"command": "es_xcreatevectorfrompoints",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xcreatevectorstring": {
+		"command": "es_xcreatevectorstring",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xdbgmsg": {
+		"command": "es_xdbgmsg",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xdbgmsgv": {
+		"command": "es_xdbgmsgv",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xdelayed": {
+		"command": "es_xdelayed",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xdisable": {
+		"command": "es_xdisable",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xdoblock": {
+		"command": "es_xdoblock",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xdumpentities": {
+		"command": "es_xdumpentities",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xdumpserverclasses": {
+		"command": "es_xdumpserverclasses",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xdumpstringtables": {
+		"command": "es_xdumpstringtables",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xeffect": {
+		"command": "es_xeffect",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xeffect beam": {
+		"command": "es_xeffect beam",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xeffect dust": {
+		"command": "es_xeffect dust",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xeffect energysplash": {
+		"command": "es_xeffect energysplash",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xeffect smoke": {
+		"command": "es_xeffect smoke",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xeffect sparks": {
+		"command": "es_xeffect sparks",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xemitsound": {
+		"command": "es_xemitsound",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xenable": {
+		"command": "es_xenable",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xentcreate": {
+		"command": "es_xentcreate",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xentsetname": {
+		"command": "es_xentsetname",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xevent": {
+		"command": "es_xevent",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xevent_cancel": {
+		"command": "es_xevent_cancel",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xevent_fire": {
+		"command": "es_xevent_fire",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xevent_initialize": {
+		"command": "es_xevent_initialize",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xevent_setfloat": {
+		"command": "es_xevent_setfloat",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xevent_setint": {
+		"command": "es_xevent_setint",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xevent_setstring": {
+		"command": "es_xevent_setstring",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xexists": {
+		"command": "es_xexists",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xfadevolume": {
+		"command": "es_xfadevolume",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xfire": {
+		"command": "es_xfire",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xflags": {
+		"command": "es_xflags",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xforcevalue": {
+		"command": "es_xforcevalue",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xforeachkey": {
+		"command": "es_xforeachkey",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xforeachval": {
+		"command": "es_xforeachval",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xformat": {
+		"command": "es_xformat",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xformatqv": {
+		"command": "es_xformatqv",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xformatv": {
+		"command": "es_xformatv",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgetargc": {
+		"command": "es_xgetargc",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgetargs": {
+		"command": "es_xgetargs",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgetargv": {
+		"command": "es_xgetargv",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgetclientvar": {
+		"command": "es_xgetclientvar",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgetcmduserid": {
+		"command": "es_xgetcmduserid",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgetentityindex": {
+		"command": "es_xgetentityindex",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgetgame": {
+		"command": "es_xgetgame",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgetindexprop": {
+		"command": "es_xgetindexprop",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgetlivingplayercount": {
+		"command": "es_xgetlivingplayercount",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgetmaxplayercount": {
+		"command": "es_xgetmaxplayercount",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgetmoney": {
+		"command": "es_xgetmoney",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgetplayercount": {
+		"command": "es_xgetplayercount",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgetplayerhandle": {
+		"command": "es_xgetplayerhandle",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgetplayerlocation": {
+		"command": "es_xgetplayerlocation",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgetplayermovement": {
+		"command": "es_xgetplayermovement",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgetplayername": {
+		"command": "es_xgetplayername",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgetplayerprop": {
+		"command": "es_xgetplayerprop",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgetplayersteamid": {
+		"command": "es_xgetplayersteamid",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgetplayerteam": {
+		"command": "es_xgetplayerteam",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgettime": {
+		"command": "es_xgettime",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgettimestamp": {
+		"command": "es_xgettimestamp",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgettimestring": {
+		"command": "es_xgettimestring",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgetuserid": {
+		"command": "es_xgetuserid",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xgive": {
+		"command": "es_xgive",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xinstall": {
+		"command": "es_xinstall",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xisbot": {
+		"command": "es_xisbot",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xkeycreate": {
+		"command": "es_xkeycreate",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xkeydelete": {
+		"command": "es_xkeydelete",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xkeygetvalue": {
+		"command": "es_xkeygetvalue",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xkeygroupcopy": {
+		"command": "es_xkeygroupcopy",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xkeygroupcreate": {
+		"command": "es_xkeygroupcreate",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xkeygroupdelete": {
+		"command": "es_xkeygroupdelete",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xkeygroupfilter": {
+		"command": "es_xkeygroupfilter",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xkeygrouplist": {
+		"command": "es_xkeygrouplist",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xkeygroupload": {
+		"command": "es_xkeygroupload",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xkeygrouprename": {
+		"command": "es_xkeygrouprename",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xkeygroupsave": {
+		"command": "es_xkeygroupsave",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xkeylist": {
+		"command": "es_xkeylist",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xkeysetvalue": {
+		"command": "es_xkeysetvalue",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xlightstyle": {
+		"command": "es_xlightstyle",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xload": {
+		"command": "es_xload",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xloadevents": {
+		"command": "es_xloadevents",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xlog": {
+		"command": "es_xlog",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xlogv": {
+		"command": "es_xlogv",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xmakepublic": {
+		"command": "es_xmakepublic",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xmath": {
+		"command": "es_xmath",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xmathparse": {
+		"command": "es_xmathparse",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xmenu": {
+		"command": "es_xmenu",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xmexec": {
+		"command": "es_xmexec",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xmsg": {
+		"command": "es_xmsg",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xphysics": {
+		"command": "es_xphysics",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xplaysound": {
+		"command": "es_xplaysound",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xprecachemodel": {
+		"command": "es_xprecachemodel",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xprop_dynamic_create": {
+		"command": "es_xprop_dynamic_create",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xprop_physics_create": {
+		"command": "es_xprop_physics_create",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xqueryclientvar": {
+		"command": "es_xqueryclientvar",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xrand": {
+		"command": "es_xrand",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xregclientcmd": {
+		"command": "es_xregclientcmd",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xregcmd": {
+		"command": "es_xregcmd",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xregex_match": {
+		"command": "es_xregex_match",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xregex_matchformat": {
+		"command": "es_xregex_matchformat",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xregex_search": {
+		"command": "es_xregex_search",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xregsaycmd": {
+		"command": "es_xregsaycmd",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xreload": {
+		"command": "es_xreload",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xremove": {
+		"command": "es_xremove",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xset": {
+		"command": "es_xset",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xsetang": {
+		"command": "es_xsetang",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xsetindexprop": {
+		"command": "es_xsetindexprop",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xsetinfo": {
+		"command": "es_xsetinfo",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xsetplayerprop": {
+		"command": "es_xsetplayerprop",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xsetpos": {
+		"command": "es_xsetpos",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xsetview": {
+		"command": "es_xsetview",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xsexec": {
+		"command": "es_xsexec",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xsexec_all": {
+		"command": "es_xsexec_all",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xsoon": {
+		"command": "es_xsoon",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xsplitvectorstring": {
+		"command": "es_xsplitvectorstring",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xsql_close": {
+		"command": "es_xsql_close",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xsql_open": {
+		"command": "es_xsql_open",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xsql_query": {
+		"command": "es_xsql_query",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xsql_queryvalue": {
+		"command": "es_xsql_queryvalue",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xstopsound": {
+		"command": "es_xstopsound",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xstrcmp": {
+		"command": "es_xstrcmp",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xstring": {
+		"command": "es_xstring",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xstringtable": {
+		"command": "es_xstringtable",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xstrlen": {
+		"command": "es_xstrlen",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xtell": {
+		"command": "es_xtell",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xtoken": {
+		"command": "es_xtoken",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xtoptext": {
+		"command": "es_xtoptext",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xtrick greenblock": {
+		"command": "es_xtrick greenblock",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xuninstall": {
+		"command": "es_xuninstall",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xunload": {
+		"command": "es_xunload",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xunregclientcmd": {
+		"command": "es_xunregclientcmd",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xunregsaycmd": {
+		"command": "es_xunregsaycmd",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xupdate": {
+		"command": "es_xupdate",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xusermsg": {
+		"command": "es_xusermsg",
+		"syntax": "",
+		"description": "",
+		"parameters": []
+	},
+	"es_xvoicechat": {
+		"command": "es_xvoicechat",
+		"syntax": "",
+		"description": "",
+		"parameters": []
 	}
 }
