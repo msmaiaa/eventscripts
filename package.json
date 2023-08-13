@@ -1,6 +1,9 @@
 {
 	"name": "eventscripts",
 	"displayName": "eventscripts",
+	"repository": {
+		"url": "https://github.com/msmaiaa/eventscripts"
+	},
 	"description": "eventscripts language support",
 	"version": "0.0.1",
 	"engines": {
