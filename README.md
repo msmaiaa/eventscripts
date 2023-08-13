@@ -1,65 +1,10 @@
-# eventscripts README
+# eventscripts
+This extension adds some level of support for eventscripts language on .txt files.  
 
-This is the README for your extension "eventscripts". After writing up a brief description, we recommend including the following sections.
+The commands were scraped from eventscript's [archived documentation](https://web.archive.org/web/20171012105522/http://www.eventscripts.com/pages/Main_Page). Some metadata like syntax and params are missing from some commands because they're not available on the official documentation. Contributions are welcome!  
 
-## Features
+If you with to disassociate eventscripts for .txt files, press CTRL + Shift + P and then search for "Change Language Mode", select "Configure file association for .txt" and then select PlainText. You can also go the other way around.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+#### TODO:
+- [ ] add support for wcs commands
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
